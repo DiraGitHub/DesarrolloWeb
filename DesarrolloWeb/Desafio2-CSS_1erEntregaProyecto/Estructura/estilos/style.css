@@ -1,0 +1,358 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Spartan";
+}
+/*
+body{
+    position: relative;
+    min-height: 100%;
+} */
+
+h1,h2,h3{
+    font-family: "PT Serif",serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.headerMenu{
+    position: relative;
+    width: 100%;
+}
+
+.logo{
+    display: inline-block;
+    margin: 20px;
+}
+
+.imgLogo{
+    width: 70px;
+}
+
+.listaMenu{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    list-style-type: none;
+    font-size: 15px;
+    font-family: "Courier Prime";
+    display: inline;
+}
+
+.listaMenu li{
+    display: inline-block;
+    padding: 20px 20px 0px 20px;
+}
+
+footer{
+    width: 100%;
+    font-size: 10px;
+    font-family: "Spartan";
+    background-color: rgb(0, 0, 0);
+    color: rgb(250, 192, 84);
+    padding: 10px 0px 10px 0px;
+    /* margin-bottom: 0; */
+}
+
+.footerSection{
+    align-items: center;
+    margin: 10px 15px 10px 20px;
+    display: inline-block;
+    width: 20%;
+}
+
+.footerSection p{
+    margin-top: 5px;
+}
+
+.icons{
+    margin-top: 15px;
+}
+
+.footerMenu{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.footerMenu a{
+    margin-right: 10px;
+    color: rgb(154, 216, 236);
+}
+
+.socialImg {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+#registroRapido{
+    width: 30%;
+    left: 600px;
+
+}
+
+#registroRapido form{
+    margin-top: 10px;
+}
+
+.formSection{
+    display: inline-block;
+}
+
+.smallForm{
+    margin-bottom: 5px;
+}
+
+#metodosPago{
+    width: 180px;
+    right: 30px;
+}
+
+.payImg{
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+}
+
+#carrusel{
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    border:red 1px solid;
+}
+
+.promos{
+    width: 33%;
+    height: 400px;
+}
+
+.infoCentral{
+    display: inline-block;
+    border: black 1px solid;
+    border-radius: 10px;
+    margin: 20px 0px 20px 20px;
+    padding:15px;
+}
+
+#leftMenu{
+    width: 15%;
+    min-height: 100%;
+}
+
+#leftMenu h2{
+    font-size: 15px;
+}
+
+#leftMenu ul li{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    list-style:none;
+}
+
+#productInfo{
+    width: 45%;
+    font-size: 12px;
+}
+
+.cardProdSection1{
+    display: inline-block;
+    width: 60%;
+}
+
+.cardProdSection1 h3{
+    font-size: 15px;
+}
+
+.cardProdSection1 h3,p,ul{
+    margin-bottom: 10px;
+}
+
+.cardProdSection1 ul{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.buyButton{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cardProdSection2{
+    display: inline-block;
+    width: 35%;
+}
+
+#tips{
+    width:25%;
+    font-family: "PT Serif",serif;
+}
+
+
+#tips h3{
+    font-size: 15px;
+}
+
+.tipText{
+    font-size: 10px;
+    font-style: italic;
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+.carruselDivs{
+    text-align: center;
+}
+
+.circuloCarrusel{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(194, 186, 186);
+    border:rgb(126, 124, 124) 1px solid;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+}
+
+#cardsList{
+    margin-top: 20px;
+    width: 75%;
+}
+
+.cardInfo{
+    display: inline-block;
+    width: 22%;
+    border:1px solid black ;
+    margin: 10px 10px 30px 5px;
+    padding: 5px;
+}
+
+.cardInfo img{
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+}
+
+.cardInfo h3{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.cardInfo p{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.pages{
+    text-align: center;
+    padding: 20px;
+}
+
+.pages a{
+    margin-left: 40px;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+.numberBox{
+    border:3px double rgb(0, 0, 0);
+    padding: 10px 10px 5px 10px;
+
+}
+
+.unicInfo{
+    width: 95%;
+    border:none;
+}
+
+.generalInfo{
+    padding: 10px;
+    border:2px solid rgb(175, 169, 169);
+    border-style:outset;
+    margin: 30px 40px 80px 40px;
+}
+
+.generalInfo p{
+    margin-top: 20px;
+}
+
+.cardsTerapeutas{
+    margin: 40px;
+}
+
+.cardInfoTerapeuta{
+    display: inline-block;
+    width: 15%;
+    border:1px solid black ;
+    margin: 10px 20px 30px 20px;
+    padding: 5px;
+
+}
+
+.opinions{
+    margin-left: 40px;
+}
+
+.formsContainer{
+    margin: 40px 30px 40px 30px;
+    /* border: 1px solid red; */
+}
+
+.twoColums{
+    display: inline-block;
+    width: 45%;
+    /* margin: 0px 20px 0px 20px; */
+    /* border: 1px solid red; */
+    padding-left: 50px;
+}
+
+.rightColum{
+    border-left:2px solid black ;
+}
+
+.twoCaptions{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.infoBox{
+    color:rgba(255, 255, 255, 0.932);
+    background-color: rgb(128, 128, 128);
+    padding: 3px 5px 2px 5px;
+}
+
+.formCaptions{
+    margin-bottom: 30px;
+    padding-left: 5%;
+}
+
+.formCaptions input{
+    border:none;
+    border-bottom: 1px dashed rgb(85, 82, 82);
+
+    /* border-style: dotted; */
+}
+
+/*
+.cardInfoTerapeuta img{
+    height: 170px;
+} */
+
+
+/* .rojo{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 2px green solid;
+  }
+
+  #movido{
+    position: relative;
+    left: 400px;
+    top: 500px;
+  } */

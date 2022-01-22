@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&family=Courier+Prime:ital@0;1&family=IBM+Plex+Mono:wght@300&family=PT+Serif:ital@0;1&family=Roboto+Mono:ital@0;1&family=Slabo+27px&family=Spartan:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>INICIO</title>
+</head>
+<body>
+    <header>
+        <nav class="headerMenu">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../imagenes/logo.jpeg" alt="Logo PHF" class="imgLogo">
+                </a>
+            </div>
+            <ul class="listaMenu">
+                <!-- <li>
+                    <a href="../index.html">Inicio</a>
+                </li> -->
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="servicios.html">Servicios</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="registro.html">Login / Registro</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section class="infoCentral unicInfo">
+        <div class="buyButton"><p>LOGIN / REGISTRO</p></div>
+        <div class="formsContainer" >
+            <article class="twoColums">
+                <form action="">
+                    <div class="formCaptions">
+                        <label for="correo">Email: </label>
+                        <input type="email" name="correo" size="25">
+                    </div>
+
+                    <div class="formCaptions">
+                        <label for="password">Pasword</label>
+                        <input type="password" name="password" size="23">
+                    </div>
+
+                    <div class="buyButton">
+                        <input type="submit" value="Iniciar Sesión"/>
+                    </div>
+                </form>
+            </article>
+            <article class="twoColums rightColum">
+                <form action="">
+                    <div class="formCaptions">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" size="45">
+                    </div>
+                    
+                    <div class="formCaptions">
+                        <div class="twoCaptions">
+                            <label for="edad">Edad: </label>
+                            <input type="number" name="edad" size="3"> <span class="infoBox">?</span>
+                        </div>
+                        <div class="twoCaptions">
+                            <label for="telefono">Telefono: </label>
+                            <input type="tel" name="telefono" size="25"> <span class="infoBox">?</span>
+                        </div>
+                    </div>
+
+                    <div class="formCaptions">
+                        <label for="ocupacion">Ocupación: </label>
+                        <input type="text" name="ocupacion" size="40"> <span class="infoBox">?</span>
+                    </div>
+
+                    <div class="formCaptions">
+                        <label for="correo">Email: </label>
+                        <input type="email" name="correo" size="45">
+                    </div>
+
+                    <div class="formCaptions">
+                        <label for="direccion">Dirección: </label>
+                        <input type="text" name="direccion" size="40"> <span class="infoBox">?</span>
+                    </div>
+
+                    <div class="formCaptions">
+                        <div class="twoCaptions">
+                            <label for="password">Pasword:</label>
+                            <input type="password" name="password" size="15">
+                        </div>
+
+                        <div class="twoCaptions">
+                            <label for="password">Confirme:</label>
+                            <input type="password" name="password" size="15">
+                        </div>
+                    </div>
+                    
+
+                    <div class="buyButton">
+                        <input type="checkbox" name="privacidad"><label for="privacidad">Acepto terminos y condiciones</label>
+                    </div>
+
+                    <div class="buyButton">
+                        <input type="submit" value="Registrar"/>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- <hr> -->
+        <section class="footerSection" id="ubicacion">
+            <h4>DIRECCIÓN</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="footerMenu">
+                <a href="../index.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+            </div>
+        </section>
+        <section class="footerSection" id="atencionClientes">
+            <h4>ATENCIÓN A CLIENTES</h4>
+            <p>Telefono: 5512345678</p>
+            <p>Email: aaaa.bbb@gmail.com</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img class="socialImg" src="../imagenes/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img class="socialImg" src="../imagenes/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img class="socialImg" src="../imagenes/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                    <img class="socialImg" src="../imagenes/twitter.png" alt="Twitter">
+                </a>
+            </div>
+        </section>
+        <section class="footerSection" id="registroRapido">
+            <h4>REGISTRO RÁPIDO</h4>
+            <form action=""  >
+                <div class="formSection">
+                    <div class="smallForm">
+                        <label for="usuario">Usuario: </label>
+                        <input type="text" name="usuario">
+                    </div>
+
+                    <div class="smallForm">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email">
+                    </div>
+
+                    <div class="smallForm">
+                        <label for="clave">Clave: </label>
+                        <input type="password" name="clave">
+                    </div>
+                </div>
+                <div class="formSection">
+                    <input id="send" type="submit" value="Enviar"/>
+                </div>
+            </form>
+        </section>
+        <section class="footerSection" id="metodosPago">
+            <h4>MÉTODOS DE PAGO</h4>
+            <div class="icons">
+                <img class="payImg" src="../imagenes/payPal.png" alt="PayPal">
+                <img class="payImg" src="../imagenes/visa.png" alt="Visa">
+                <img class="payImg" src="../imagenes/masterCard.png" alt="MasterCard">
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>
