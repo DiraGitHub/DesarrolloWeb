@@ -1,2 +1,2 @@
-# DesarrolloWeb
-Repositorio para desafíos y proyectos del curso de DerarrolloWeb CoderHouse
+# FullStack
+Repositorio para desafios y proyectos de la carrera Full Stack en CODER HOUSE
