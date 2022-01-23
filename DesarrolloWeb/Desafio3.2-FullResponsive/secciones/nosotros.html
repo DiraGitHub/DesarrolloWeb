@@ -11,17 +11,18 @@
     <title>INICIO</title>
 </head>
 <body>
-    <header>
-        <nav class="headerMenu">
+    <header class="headerMenu">
+        <nav >
             <div class="logo">
                 <a href="../index.html">
                     <img src="../imagenes/logo.jpeg" alt="Logo PHF" class="imgLogo">
                 </a>
             </div>
+            <input class="iconMenu" type="checkbox" id="iconMenu" />
+                <label class="iMenu" for="iconMenu">
+                    <span class="navIcon"></span>
+                </label>
             <ul class="listaMenu">
-                <!-- <li>
-                    <a href="../index.html">Inicio</a>
-                </li> -->
                 <li>
                     <a href="productos.html">Productos</a>
                 </li>
@@ -37,8 +38,7 @@
             </ul>
         </nav>
     </header>
-    <hr>
-    <section class="infoCentral unicInfo nosotrosInfo">
+    <section class="central">
         <article class="generalInfo">
             <h3>Somos...</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat quis repudiandae iste magnam dolorum reiciendis modi repellat rerum dolores, accusantium maxime at, sapiente quibusdam nisi corrupti eveniet magni harum!</p>
@@ -55,38 +55,32 @@
             <h3>Visión...</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat quis repudiandae iste magnam dolorum reiciendis modi repellat rerum dolores, accusantium maxime at, sapiente quibusdam nisi corrupti eveniet magni harum!</p>
         </article>
-        <article class="opinions">
-            <div class="cardInfo">
+        <article class="cardsText">
+            <div class="cText">
                 <h3>Opinion 1...</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat quis repudiandae iste magnam dolorum reiciendis modi repellat rerum dolores, accusantium maxime at, sapiente quibusdam nisi corrupti eveniet magni harum!</p>
             </div>
-            <div class="cardInfo">
+            <div class="cText">
                 <h3>Opinion 2...</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat quis repudiandae iste magnam dolorum reiciendis modi repellat rerum dolores, accusantium maxime at, sapiente quibusdam nisi corrupti eveniet magni harum!</p>
             </div>
-            <div class="cardInfo">
+            <div class="cText">
                 <h3>Opinion 3...</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat quis repudiandae iste magnam dolorum reiciendis modi repellat rerum dolores, accusantium maxime at, sapiente quibusdam nisi corrupti eveniet magni harum!</p>
             </div>
-            <div class="cardInfo">
+            <div class="cText">
                 <h3>Opinion 4...</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat quis repudiandae iste magnam dolorum reiciendis modi repellat rerum dolores, accusantium maxime at, sapiente quibusdam nisi corrupti eveniet magni harum!</p>
             </div>
             
         </article>
     </section>
-    <!-- <hr> -->
-    <footer>
-        <section class="footerSection" id="ubicacion">
+    <footer class="foot">
+        <section class="footerSection ubicacion">
             <h4>DIRECCIÓN</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="footerMenu">
-                <a href="../index.html">Home</a>
-                <a href="productos.html">Productos</a>
-                <a href="servicios.html">Servicios</a>
-            </div>
         </section>
-        <section class="footerSection" id="atencionClientes">
+        <section class="footerSection atencionClientes">
             <h4>ATENCIÓN A CLIENTES</h4>
             <p>Telefono: 5512345678</p>
             <p>Email: aaaa.bbb@gmail.com</p>
@@ -105,7 +99,7 @@
                 </a>
             </div>
         </section>
-        <section class="footerSection" id="registroRapido">
+        <section class="footerSection registroRapido">
             <h4>REGISTRO RÁPIDO</h4>
             <form action=""  >
                 <div class="formSection">
@@ -129,7 +123,7 @@
                 </div>
             </form>
         </section>
-        <section class="footerSection" id="metodosPago">
+        <section class="footerSection metodosPago">
             <h4>MÉTODOS DE PAGO</h4>
             <div class="icons">
                 <img class="payImg" src="../imagenes/payPal.png" alt="PayPal">

@@ -11,17 +11,18 @@
     <title>INICIO</title>
 </head>
 <body>
-    <header>
-        <nav class="headerMenu">
+    <header class="headerMenu">
+        <nav >
             <div class="logo">
                 <a href="../index.html">
                     <img src="../imagenes/logo.jpeg" alt="Logo PHF" class="imgLogo">
                 </a>
             </div>
+            <input class="iconMenu" type="checkbox" id="iconMenu" />
+                <label class="iMenu" for="iconMenu">
+                    <span class="navIcon"></span>
+                </label>
             <ul class="listaMenu">
-                <!-- <li>
-                    <a href="../index.html">Inicio</a>
-                </li> -->
                 <li>
                     <a href="productos.html">Productos</a>
                 </li>
@@ -37,8 +38,8 @@
             </ul>
         </nav>
     </header>
-    <hr>
-    <div class="infoCentral unicInfo">
+
+    <div class="central">
         <section>
             <article class="generalInfo">
                 <h3>Asesoria Personalizada</h3>
@@ -49,51 +50,45 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam dolor nulla, repellat consectetur atque consequuntur quae assumenda recusandae. Amet, earum aspernatur. Ratione, nesciunt dignissimos? Laborum ab eaque aliquam voluptatibus?</p>
             </article>
         </section>
-        <section class="cardsTerapeutas">
-            <div class="cardInfo cardInfoTerapeuta">
-                <img src="../imagenes/terapeutas/terapeuta1.png" alt="Terapeuta 1">
+        <section class="productsList">
+            <div class="cardProd">
+                <img class="cardImg" src="../imagenes/terapeutas/terapeuta1.png" alt="Terapeuta 1">
                 <h3>Terapeuta 1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, optio earum placeat voluptate, ab id labore obcaecati praesentium impedit ut nam dicta deserunt neque sit quis in veritatis tempore    error.</p>
-                <div class="buyButton"><button>Agendar</button></div>
+                <div class="cardButton"><button>Agendar</button></div>
             </div>
-            <div class="cardInfo cardInfoTerapeuta">
-                <img src="../imagenes/terapeutas/terapeuta2.png" alt="Terapeuta 2">
+            <div class="cardProd">
+                <img class="cardImg" src="../imagenes/terapeutas/terapeuta2.png" alt="Terapeuta 2">
                 <h3>Terapeuta 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, optio earum placeat voluptate, ab id labore obcaecati praesentium impedit ut nam dicta deserunt neque sit quis in veritatis tempore    error.</p>
-                <div class="buyButton"><button>Agendar</button></div>
+                <div class="cardButton"><button>Agendar</button></div>
             </div>
-            <div class="cardInfo cardInfoTerapeuta">
-                <img src="../imagenes/terapeutas/terapeuta3.png" alt="Terapeuta 3">
+            <div class="cardProd">
+                <img class="cardImg" src="../imagenes/terapeutas/terapeuta3.png" alt="Terapeuta 3">
                 <h3>Terapeuta 3</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, optio earum placeat voluptate, ab id labore obcaecati praesentium impedit ut nam dicta deserunt neque sit quis in veritatis tempore    error.</p>
-                <div class="buyButton"><button>Agendar</button></div>
+                <div class="cardButton"><button>Agendar</button></div>
             </div>
-            <div class="cardInfo cardInfoTerapeuta">
-                <img src="../imagenes/terapeutas/terapeuta4.png" alt="Terapeuta 4">
+            <div class="cardProd">
+                <img class="cardImg" src="../imagenes/terapeutas/terapeuta4.png" alt="Terapeuta 4">
                 <h3>Terapeuta 4</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, optio earum placeat voluptate, ab id labore obcaecati praesentium impedit ut nam dicta deserunt neque sit quis in veritatis tempore    error.</p>
-                <div class="buyButton"><button>Agendar</button></div>
+                <div class="cardButton"><button>Agendar</button></div>
             </div>
-            <div class="cardInfo cardInfoTerapeuta">
-                <img src="../imagenes/terapeutas/terapeuta5.png" alt="Terapeuta 5">
+            <div class="cardProd">
+                <img class="cardImg" src="../imagenes/terapeutas/terapeuta5.png" alt="Terapeuta 5">
                 <h3>Terapeuta 5</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, optio earum placeat voluptate, ab id labore obcaecati praesentium impedit ut nam dicta deserunt neque sit quis in veritatis tempore    error.</p>
-                <div class="buyButton"><button>Agendar</button></div>
+                <div class="cardButton"><button>Agendar</button></div>
             </div>
         </section>
     </div>
-    <!-- <hr> -->
-    <footer>
-        <section class="footerSection" id="ubicacion">
+    <footer class="foot">
+        <section class="footerSection ubicacion">
             <h4>DIRECCIÓN</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="footerMenu">
-                <a href="../index.html">Home</a>
-                <a href="productos.html">Productos</a>
-                <a href="nosotros.html">Nosotros</a>
-            </div>
         </section>
-        <section class="footerSection" id="atencionClientes">
+        <section class="footerSection atencionClientes">
             <h4>ATENCIÓN A CLIENTES</h4>
             <p>Telefono: 5512345678</p>
             <p>Email: aaaa.bbb@gmail.com</p>
@@ -112,7 +107,7 @@
                 </a>
             </div>
         </section>
-        <section class="footerSection" id="registroRapido">
+        <section class="footerSection registroRapido">
             <h4>REGISTRO RÁPIDO</h4>
             <form action=""  >
                 <div class="formSection">
@@ -136,7 +131,7 @@
                 </div>
             </form>
         </section>
-        <section class="footerSection" id="metodosPago">
+        <section class="footerSection metodosPago">
             <h4>MÉTODOS DE PAGO</h4>
             <div class="icons">
                 <img class="payImg" src="../imagenes/payPal.png" alt="PayPal">
