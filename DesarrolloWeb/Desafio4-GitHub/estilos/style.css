@@ -1,0 +1,676 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Spartan";
+}
+
+h1,h2,h3{
+    font-family: "PT Serif",serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 20px 20px;
+}
+
+/*-----------------------------*/
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7rem 50% 7rem;
+    grid-template-areas:
+        "head"
+        "central"
+        "footer"
+    ;
+}
+
+.headerMenu{
+    grid-area: head;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.central {
+    grid-area:central;
+}
+
+.foot{
+    grid-area: footer;
+}
+
+/*------------ ---------------- */
+
+.listaMenu li a:hover, .iconMenu:hover{
+    background-color: #dbd5d5;
+}
+
+.logo{
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+}
+
+.imgLogo{
+    width: 70px;
+}
+
+.imgLogo:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.listaMenu{
+    overflow: hidden;
+    list-style-type: none;
+    font-size: 15px;
+    font-family: "Courier Prime";
+    clear: both;
+    max-height: 0;
+    margin-top:30px;
+    transition: max-height .2s ease-out;
+}
+
+.listaMenu a{
+    display: block;
+}
+
+.iMenu{
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.navIcon{
+    background: rgb(56, 55, 55);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.navIcon::before, .navIcon::after {
+    background: rgb(56, 55, 55);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.navIcon::before{
+    top: 5px;
+}
+
+.navIcon::after {
+    top:-5px;
+}
+
+.iconMenu{
+    display: none;
+}
+
+.iconMenu:checked ~ .listaMenu{
+    max-height: 240px;
+}
+
+.iconMenu:checked ~ .navIcon{
+    background: transparent;
+}
+
+.iconMenu:checked ~ .navIcon::before{
+    transform: rotate(-45deg);
+}
+
+.iconMenu:checked ~ .navIcon::after{
+    transform: rotate(45deg);
+}
+
+.iconMenu:checked ~ .iMenu:not(.steps) .navIcon::before,
+.iconMenu:checked ~ .iMenu:not(.steps) .navIcon::after{
+    top: 0;
+}
+
+
+@media (min-width:800px) {
+
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 7rem 50% 11rem;
+        grid-template-areas:
+            "head"
+            "central"
+            "footer"
+        ;
+    }
+
+    .listaMenu li{
+        float:left;
+    }
+
+    .listaMenu li a{
+        padding: 20px 30px;
+    }
+
+    .listaMenu{
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .iMenu{
+        display: none;
+    }
+}
+
+/*--------------------------------*/
+.foot{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 10px;
+    font-family: "Spartan";
+    background-color: rgb(0, 0, 0);
+    color: rgb(250, 192, 84);
+    padding: 10px 0px 10px 0px;
+}
+
+.footerSection{
+    margin: 10px 15px 10px 20px;
+    width: 40%;
+}
+
+.ubicacion{
+    display: none;
+}
+
+.footerSection p{
+    margin-top: 5px;
+}
+
+.footerMenu{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.registroRapido{
+    display: none;
+}
+
+.registroRapido form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.smallForm{
+    margin-bottom: 5px;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+
+.icons a{
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.socialImg {
+    height: 20px;
+    width: 20px;
+}
+
+.payImg{
+    height: 20px;
+    width: 20px;
+    margin-bottom: 5px;
+}
+
+@media (min-width:800px) {
+    .ubicacion{
+        display: inline;
+    }
+
+    .footerSection{
+        width: 20%;
+    }
+
+    .registroRapido{
+        display: inline;
+        width: 30%;
+    }
+
+
+}
+
+/*-------------------------------*/
+
+.carrusel{
+    display: flex;
+    justify-content: space-around;
+}
+
+.promos{
+    width: 100%;
+    height: 300px;
+}
+
+.promo2, .promo3{
+    display: none;
+}
+
+@media (min-width:800px) {
+    .promo2, .promo3{
+        display: inline;
+    }
+
+    .promos{
+        width: 30%;
+        margin-right: 20px;
+    }
+
+
+}
+
+/*-------------------------------*/
+
+.infoCentral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloPaquetes{
+    margin-left: 10px;
+}
+
+.leftMenu {
+    display: none;
+}
+
+.productInfo, .productsList{
+    width: 100%;
+    font-size: 12px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(148, 143, 143) solid;
+    margin: 15px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.cardImg{
+    width: 60%;
+    height: 60%;
+    align-self: center;
+    border:1px rgb(134, 132, 132) solid;
+}
+
+.card:hover .cardImg{
+    animation:change-form 2s;
+}
+
+@keyframes change-form {
+    5% {
+        border-radius: 10px;
+    }
+    50%{
+        border-radius: 10px;
+        scale: 1.1;
+    }
+
+}
+
+.cardInfo ul{
+    display: none;
+}
+
+.cardInfo h3,p,ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.cardButton{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.tips{
+    width: 90%;
+    font-size: 12px;
+    border: 1px rgb(148, 143, 143) solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "PT Serif",serif;
+}
+
+.tips h3{
+    font-size: 15px;
+}
+
+.tipText{
+    font-size: 10px;
+    font-style: italic;
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+
+@media (min-width:800px) {
+    .tituloPaquetes{
+        display: none;
+    }
+
+    .infoCentral {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .leftMenu {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        border: 1px rgb(148, 143, 143) solid;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 20%;
+    }
+
+    .leftMenu ul {
+        list-style-type:none;
+    }
+
+    .leftMenu a{
+        display: block;
+        padding: 20px 5px;
+    }
+
+    .leftMenu a:hover{
+        /* background-color: rgb(212, 224, 230); */
+        background:linear-gradient(to right, rgb(125, 179, 204),rgb(216, 210, 210),white);
+    }
+    .productInfo{
+        border: 1px rgb(148, 143, 143) solid;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .card{
+        padding: 0;
+        flex-direction: row-reverse;
+        border:none;
+        width: 100%;
+    }
+
+    .cardImg{
+        width: 70%;
+        height: 40%;
+        align-self: center;
+    }
+
+    .cardInfo ul{
+        display: inline;
+        margin-left: 10px;
+    }
+
+    .cardInfo ul li{
+        margin-top: 5px;
+        margin-left: 50px;
+        list-style: circle;
+    }
+
+    .tips{
+        padding: 15px;
+        width: 30%;
+    }
+}
+
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+
+
+.generalInfo{
+    padding: 10px;
+    border:2px solid rgb(175, 169, 169);
+    border-style:outset;
+    margin: 30px 40px 80px 40px;
+}
+
+.generalInfo p{
+    margin-top: 20px;
+}
+
+
+.cardsText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cText{
+    border: 1px rgb(148, 143, 143) solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+
+@media (min-width:800px) {
+    .cText{
+        width: 20%;
+    }
+}
+
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+
+.pages{
+    display: none;
+}
+
+.cardProd{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(148, 143, 143) solid;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.cardProd .cardImg{
+    width: 70%;
+    height: 70%;
+    align-self: center;
+}
+
+
+.cardProd .cardImgTerap{
+    width: 70%;
+    height: 40%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.cardProd:hover .cardImg{
+    animation:change-formProd 2s;
+}
+
+.cardProd:hover .cardImgTerap{
+    animation:change-formTerap 1s;
+}
+
+@keyframes change-formProd {
+    5% {
+        border-radius: 10px;
+    }
+    50%{
+        /* border-radius: 10px; */
+        scale: 1.1;
+    }
+
+}
+
+@keyframes change-formTerap {
+    90%{
+        scale: 1.1;
+    }
+
+}
+
+/* .pages{
+    text-align: center;
+    padding: 20px;
+} */
+
+/* .pages a{
+    margin-left: 40px;
+    font-size: 12px;
+    font-weight:bold;
+} */
+
+/* .numberBox{
+    border:3px double rgb(0, 0, 0);
+    padding: 10px 10px 5px 10px;
+
+} */
+
+
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+
+.mainTitle{
+    display: none;
+}
+
+.formsContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "login"
+        "signUp"
+    ;
+
+}
+
+.tituloForm{
+    margin-bottom: 50px;
+}
+
+.formLogin{
+    grid-area: login;
+}
+
+.formSignUp{
+    grid-area: signUp;
+    border-top: 2px rgb(116, 110, 110) solid;
+    border-left: none;
+}
+
+.formLogin, .formSignUp{
+    padding: 10px 0 20px 50px;
+}
+
+.twoCaptions{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.infoBox{
+    color:rgba(255, 255, 255, 0.932);
+    background-color: rgb(128, 128, 128);
+    padding: 3px 5px 2px 5px;
+}
+
+.formCaptions{
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formCaptions input{
+    border:none;
+    border-bottom: 1px dashed rgb(85, 82, 82);
+    size: 20;
+}
+
+
+@media (min-width:800px) {
+
+
+    .cardProd .cardImgTerap{
+        width: 70%;
+        height: 70%;
+    }
+
+    .mainTitle{
+        display: block;
+    }
+
+    .tituloForm{
+        display: none;
+    }
+
+    .formsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "login signUp"
+        ;
+        margin-top: 50px;
+    }
+
+    .formLogin, .formSignUp{
+        padding: 50px 0 20px 50px;
+    }
+
+    .formSignUp{
+        grid-area: signUp;
+        border-left: 2px rgb(145, 124, 124) solid;
+        border-top: none;
+    }
+}
