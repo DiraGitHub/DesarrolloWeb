@@ -1,0 +1,514 @@
+*{
+    font-family: "Spartan";
+    color: rgb(0, 0, 0);
+}
+
+body{
+    margin-bottom: 160px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+h1,h2,h3{
+    font-family: "PT Serif",serif;
+}
+
+.imgLogo{
+    width: 70px;
+}
+
+.imgLogo:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.navbar-nav {
+    align-items: flex-end;
+}
+
+@media (min-width:992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+
+/*-------------------------------*/
+
+.promos{
+    height: 600px;
+}
+
+.carousel-caption{
+    background-color: rgba(207, 208, 209, 0.781);
+}
+
+.carousel-indicators [data-bs-target]{
+
+    background-color: black;
+}
+
+/*--------------------------------*/
+.foot{
+    font-size: 10px;
+    font-family: "Spartan";
+    background-color: rgb(0, 0, 0);
+    padding: 10px 0px 10px 0px;
+}
+
+.ubicacion , .registroRapido{
+    display: none;
+}
+
+
+.footerSection h4{
+    font-size: 13px;
+    color: rgb(250, 192, 84);
+    margin-top: 5px;
+}
+
+.footerSection p{
+    font-size: 12px;
+    color: rgb(250, 192, 84);
+    margin-top: 5px;
+}
+
+.registroRapido form{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.smallForm{
+    color: rgb(250, 192, 84);
+    margin-bottom: 5px;
+}
+
+.smallForm label{
+    color: rgb(250, 192, 84);
+    margin-bottom: 5px;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+
+.icons a{
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.socialImg {
+    height: 20px;
+    width: 20px;
+}
+
+.payImg{
+    height: 20px;
+    width: 20px;
+    margin-bottom: 5px;
+}
+
+@media (min-width:1000px) {
+
+    .footerSection{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (min-width:992px) {
+    .ubicacion, .registroRapido{
+        display: inline;
+    }
+
+}
+
+/*-------------------------------*/
+
+.central {
+    margin-top: 20px;
+    margin-bottom: 200px;
+}
+
+.tituloPaquetes{
+    margin-left: 10px;
+    padding: 20px 10px;
+}
+
+.leftMenu {
+    display: none;
+}
+
+.card{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(148, 143, 143) solid;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.cardImg{
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    border:1px rgb(134, 132, 132) solid;
+}
+
+.card:hover .cardImg{
+    animation:change-form 2s;
+}
+
+@keyframes change-form {
+    5% {
+        border-radius: 10px;
+    }
+    50%{
+        border-radius: 10px;
+        scale: 1.1;
+    }
+
+}
+
+.cardInfo ul{
+    display: none;
+}
+
+.cardInfo p,ul{
+    font-size: 13px;
+}
+
+.cardInfo h3,p,ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.cardButton{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cardButton button{
+    padding: 10px;
+    border-radius: 15px;
+    border-style:inherit;
+    background: linear-gradient(to top,rgb(128, 128, 128),rgb(255, 255, 255));
+}
+
+.tips{
+    font-size: 13px;
+    border: 1px rgb(148, 143, 143) solid;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    font-family: "PT Serif",serif;
+}
+
+.tips h3{
+    font-size: 15px;
+}
+
+.tipText{
+    font-size: 10px;
+    font-style: italic;
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+
+@media (min-width:992px) {
+    .tituloPaquetes{
+        display: none;
+    }
+
+    .leftMenu {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        border: 1px rgb(148, 143, 143) solid;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .leftMenu ul {
+        list-style-type:none;
+    }
+
+    .leftMenu a{
+        display: block;
+        padding: 20px 5px;
+    }
+
+    .leftMenu a:hover{
+        background:linear-gradient(to right, rgb(125, 179, 204),rgb(216, 210, 210),white);
+    }
+
+    .productInfo{
+        border: 1px rgb(148, 143, 143) solid;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .card{
+        margin-bottom: 0;
+        margin-right: 0;
+        flex-direction: row-reverse;
+        border:none;
+        width: 100%;
+    }
+
+    .cardImg{
+        width: 40%;
+        height: 40%;
+        margin-left: 20px;
+        align-self: center;
+    }
+
+    .cardInfo ul{
+        display: inline;
+        margin-left: 10px;
+    }
+
+    .cardInfo ul li{
+        margin-top: 5px;
+        margin-left: 50px;
+        list-style: circle;
+    }
+
+    .tips{
+        margin-left: 10px;
+        padding: 15px;
+        margin-right: 30px;
+    }
+}
+
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+
+.centralService{
+    margin-top: 20px;
+    margin-bottom: 300px;
+}
+
+.productsList{
+    width: 100%;
+    font-size: 12px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.generalInfo{
+    padding: 10px;
+    border:2px solid rgb(175, 169, 169);
+    border-style:outset;
+    margin: 30px 40px 80px 40px;
+}
+
+.generalInfo p{
+    margin-top: 20px;
+}
+
+
+.cardsText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cText{
+    border: 1px rgb(148, 143, 143) solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+
+@media (min-width:800px) {
+    .cText{
+        width: 20%;
+    }
+}
+
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+
+.pages{
+    display: none;
+}
+
+.cardProd{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(148, 143, 143) solid;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    height:fit-content;
+}
+
+.cardProd .cardImg{
+    width: 70%;
+    height: 70%;
+    align-self: center;
+}
+
+
+.cardProd .cardImgTerap{
+    width: 70%;
+    height: 40%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.cardProd:hover .cardImg{
+    animation:change-formProd 2s;
+}
+
+.cardProd:hover .cardImgTerap{
+    animation:change-formTerap 1s;
+}
+
+@keyframes change-formProd {
+    5% {
+        border-radius: 10px;
+    }
+    50%{
+        scale: 1.1;
+    }
+
+}
+
+@keyframes change-formTerap {
+    90%{
+        scale: 1.1;
+    }
+
+}
+
+
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
+
+.mainTitle{
+    display: none;
+}
+
+.formsContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "login"
+        "signUp"
+    ;
+
+}
+
+.tituloForm{
+    margin-bottom: 50px;
+}
+
+.formLogin{
+    grid-area: login;
+}
+
+.formSignUp{
+    grid-area: signUp;
+    border-top: 2px rgb(116, 110, 110) solid;
+    border-left: none;
+}
+
+.formLogin, .formSignUp{
+    padding: 10px 0 20px 50px;
+}
+
+.twoCaptions{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.infoBox{
+    color:rgba(255, 255, 255, 0.932);
+    background-color: rgb(128, 128, 128);
+    padding: 3px 5px 2px 5px;
+}
+
+.formCaptions{
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formCaptions input{
+    border:none;
+    border-bottom: 1px dashed rgb(85, 82, 82);
+    size: 20;
+}
+
+
+@media (min-width:800px) {
+
+
+    .cardProd .cardImgTerap{
+        width: 70%;
+        height: 70%;
+    }
+
+    .mainTitle{
+        display: block;
+    }
+
+    .tituloForm{
+        display: none;
+    }
+
+    .formsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "login signUp"
+        ;
+        margin-top: 50px;
+    }
+
+    .formLogin, .formSignUp{
+        padding: 50px 0 20px 50px;
+    }
+
+    .formSignUp{
+        grid-area: signUp;
+        border-left: 2px rgb(145, 124, 124) solid;
+        border-top: none;
+    }
+}
