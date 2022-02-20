@@ -1,3 +1,31 @@
+@charset "UTF-8";
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/***********************************/
+/*********** CSS GENERAL ***********/
+/***********************************/
 * {
   margin: 0;
   padding: 0;
@@ -7,40 +35,21 @@ body {
   margin-bottom: 150px;
   color: black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-body h1, body h2, body h3, body h4 {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
-
-body h1 {
-  font-size: 30px;
-}
-
-body h2 {
-  font-size: 25px;
-}
-
-body h3 {
-  font-size: 20px;
-}
-
-body h4 {
-  font-size: 15px;
+  /* SE MODIFICA DEFINICIÓN PARA HACERLO CON UN FOR Y UNA OPERACIÓN ARITMETICA*/
+  /* SE MODIFICA DEFINICIÓN PARA HACERLO MEDIANTE UN MAP*/
 }
 
 body .button {
-  background: -webkit-gradient(linear, left bottom, left top, from(#3a5c77), to(white));
-  background: linear-gradient(to top, #3a5c77, white);
+  background: -webkit-gradient(linear, left bottom, left top, from(#576ce6), to(white));
+  background: linear-gradient(to top, #576ce6, white);
   padding: 5px 10px;
   border-style: hidden;
   border-radius: 15px;
 }
 
-/******************************/
-/******************************/
-/******************************/
+/***********************************/
+/***** CUSTOMIZACIÓN NAV BAR *******/
+/***********************************/
 .navbar {
   border-bottom: 3px double #b1aeae;
 }
@@ -81,22 +90,22 @@ body .button {
   }
 }
 
-/**********************/
-/**********************/
-/**********************/
+/***********************************/
+/***** CUSTOMIZACIÓN CAROUSEL ******/
+/***********************************/
 .carousel-item .carousel-caption {
   color: black;
 }
 
-/**********************/
-/**********************/
-/**********************/
+/***********************************/
+/************ CSS FOOTER ***********/
+/***********************************/
 .ubicacion, .registroRapido {
   display: none;
 }
 
 .foot {
-  background-color: #bbb5b5;
+  background-color: #dfdbdb;
   padding: 10px;
 }
 
@@ -104,7 +113,7 @@ body .button {
   font-size: 12px;
 }
 
-.foot section h4, .foot section p, .foot section label, .foot section input {
+.foot section h4, .foot section label, .foot section input {
   color: #3d3d50;
 }
 
@@ -113,13 +122,22 @@ body .button {
   color: #3d3d50;
 }
 
+.foot section .socialMedia {
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.foot section .socialMedia i {
+  color: #151616;
+}
+
 .foot section .icons {
   margin-top: 15px;
 }
 
 .foot section .icons img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (min-width: 600px) {
@@ -160,13 +178,18 @@ body .button {
   }
 }
 
-/**********************/
-/**********************/
-/**********************/
-.centralIndex {
+/***********************************/
+/******* CSS MAIN INFO INDEX *******/
+/***********************************/
+/* DEFINICIÓN POR MIXIN*/
+.central, .centralIndex, .centralProducts {
   margin-top: 20px;
-  padding: 10px;
   margin-bottom: 200px;
+  padding: 10px;
+}
+
+/* DEFINICIÓN POR EXTEND*/
+.centralIndex {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -199,6 +222,10 @@ body .button {
   padding: 10px;
 }
 
+/***********************************/
+/*** CSS INFO PRINCIPAL GENERAL ****/
+/****** CSS CARDS PRIMER PARTE *****/
+/***********************************/
 .centralTitle {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -232,7 +259,7 @@ body .button {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px #a5a3a3 solid;
 }
 
 .myCard:hover .imgCard {
@@ -249,7 +276,6 @@ body .button {
 
 .myCard .imgCard {
   width: 50%;
-  border-radius: 15px;
 }
 
 .myCard ul {
@@ -284,9 +310,12 @@ body .button {
     margin-bottom: 20px;
   }
   .myCard .imgCard {
-    border: 1px solid gray;
+    width: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .myCard .textCard {
+    width: 80%;
     padding: 10px;
   }
 }
@@ -342,16 +371,9 @@ body .button {
   }
 }
 
-/**********************/
-/**********************/
-/**********************/
-.centralProducts {
-  margin-top: 20px;
-  margin-bottom: 200px;
-  padding: 10px;
-  margin-bottom: 200px;
-}
-
+/***********************************/
+/*** CSS CARDS 2 & INFO PRODUCTOS **/
+/***********************************/
 .cardsContainer {
   padding: 15px;
   margin: 10px;
@@ -393,7 +415,6 @@ body .button {
 @media (min-width: 992px) {
   .centralProducts {
     padding: 10px;
-    padding-right: 10px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 5fr;
@@ -413,9 +434,9 @@ body .button {
   }
 }
 
-/**********************/
-/**********************/
-/**********************/
+/**************************************/
+/* CSS MAIN INFO NOSOTROS & SERVICIOS */
+/**************************************/
 .centralInfo {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -442,24 +463,9 @@ body .button {
   margin-bottom: 20px;
 }
 
-@media (min-width: 600px) {
-  .cardsContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-/**********************/
-/**********************/
-/**********************/
+/***********************************/
+/***** CSS MAIN INFO REGISTRO ******/
+/***********************************/
 .infoRegistro {
   margin-top: 50px;
   padding: 10px;
@@ -484,7 +490,7 @@ body .button {
 
 .infoRegistro .formsContainer .login {
   margin-top: 30px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px #a5a3a3 solid;
 }
 
 .infoRegistro .formsContainer .registro {
@@ -530,7 +536,7 @@ body .button {
     border-bottom: none;
   }
   .infoRegistro .formsContainer .registro {
-    border-left: 1px solid gray;
+    border-left: 1px #a5a3a3 solid;
   }
   .infoRegistro .formsContainer .login, .infoRegistro .formsContainer .registro {
     padding: 20px;

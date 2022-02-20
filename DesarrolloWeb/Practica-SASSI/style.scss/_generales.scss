@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-bottom: 150px;
+    color:rgb(0, 0, 0);
+    // font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Spartan";
+
+    h1,h2,h3,h4 { 
+        // font-family: 'Courier New', Courier, monospace;
+        font-family: "PT Serif",serif;
+        font-weight:bold;
+    }
+    
+    h1{ font-size: 30px;}
+    h2{ font-size: 25px;}
+    h3{ font-size: 20px;}
+    h4{ font-size: 15px;}
+    
+    .button{
+        background: linear-gradient(to top,rgb(58, 92, 119),white);
+        padding: 5px 10px;
+        border-style:hidden;
+        border-radius: 15px;
+    }
+}
+
+/******************************/
+/**********NAV BAR*************/
+/******************************/
+
+.navbar{
+    border-bottom: 3px double rgb(177, 174, 174);
+    .logo{
+        width: 90px;
+    }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 20px 20px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+
+/**********************/
+/*******FOOTER*********/
+/**********************/
+
+.ubicacion, .registroRapido{
+    display: none;
+}
+
+.foot{
+    background-color:rgb(187, 181, 181);    
+    padding: 10px;
+    section{
+        font-size: 12px;
+
+        h4,p,label,input{
+            color: rgb(61, 61, 80);
+        }
+
+        p{
+            margin-bottom: 5px;
+            color: rgb(61, 61, 80);
+        }
+
+        .icons{
+            margin-top: 15px;
+            img {
+                width:20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+/**********************/
+/********CENTRAL********/
+/**********************/
+
+
+/********TITLES********/
+
+.centralTitle, .centralTitle2{
+    padding: 20px ;
+    text-align: center;
+}
+
+/********LEFT MENU********/
+.leftMenu{
+    display: none;
+}
+
+/********CARDS********/
+.myCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: $borderColor;
+
+    &:hover .imgCard{
+        transform: scale(1.06);
+        transition: all .5s;
+    }
+
+    .imgCard,h3,p,ul, .buttonCard{
+        margin-bottom:20px ;
+        color: rgb(0, 0, 0);
+    }
+
+    .imgCard{
+        width: 50%;   
+        border: $borderColor;
+        border-radius: 15px;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .buttonCard{
+        text-align: center;
+    }
+}
+
+.lastCard{
+    border: none;
+}
+
+
+/********OTRAS CARDS********/
+.cardsContainer {
+    padding: 15px;
+    margin: 10px;
+    border: $borderColor;
+    border-radius: 15px;
+}
+
+
+
+/**********************/
+/*******OTRO CENTRAL*********/
+/**********************/
+
+.centralInfo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .generalInfo{
+        padding: 10px;
+        border: 3px rgb(165, 163, 163) ;
+        border-style:outset;
+        width: 90%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}

@@ -284,6 +284,7 @@ body .button {
     margin-bottom: 20px;
   }
   .myCard .imgCard {
+    width: 100%;
     border: 1px solid gray;
   }
   .myCard .textCard {

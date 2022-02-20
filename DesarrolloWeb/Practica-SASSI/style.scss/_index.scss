@@ -1,0 +1,55 @@
+
+.carousel-item .carousel-caption{
+    color: rgb(0, 0, 0);
+}
+
+/**********************/
+/**********************/
+/**********************/
+
+
+.centralIndex{
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr 7fr .1fr 2fr;
+    grid-template-areas: 
+        "title"
+        "products"
+        "title2"
+        "tips"
+    ;
+
+    
+    section{
+        margin-left: 10px;
+        border: $borderColor;
+        border-radius: 15px;
+        padding: 10px;
+    }
+}
+
+
+.centralTitle{
+    grid-area: title;
+}
+
+.productInfo{
+    grid-area: products;
+}
+
+.centralTitle2{
+    grid-area: title2;
+}
+
+.tips{
+    grid-area: tips;
+}
+
+.tips{
+    h3{
+        display: none;
+    }
+}

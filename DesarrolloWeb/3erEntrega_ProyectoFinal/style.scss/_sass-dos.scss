@@ -1,0 +1,33 @@
+$defBorde: 1px rgb(165, 163, 163) solid;
+$defPadding: 10px;
+$defFootColor:  rgb(61, 61, 80);
+$defFontSize:30px;
+
+//Definici�n de tama�o en titulos del h1 al h4 que son los utilizados en el proyecto
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:bold;
+        font-size: $defFontSize;
+        $defFontSize:$defFontSize - 5;
+    }
+}
+
+//Definicion de map para el estilo de la clase "button"
+$buttonStile: (
+    backcolor: linear-gradient(to top,rgb(87, 108, 230),white),
+    paddingDef: 5px 10px,
+    styleBorder: hidden,
+    radiusBorder: 15px
+);
+
+@mixin imgIconSize($size){
+    width: $size;
+    height: $size;
+}
+
+@mixin centralStyle($marginTop,$marginBottom,$padding) {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+    padding: $padding;
+}
