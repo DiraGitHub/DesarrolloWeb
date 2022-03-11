@@ -2,25 +2,25 @@
 h1 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 h2 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 25px;
 }
 
 h3 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h4 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /***********************************/
@@ -32,9 +32,10 @@ h4 {
 }
 
 body {
+  margin-bottom: 150px;
   color: black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body .button {
@@ -45,28 +46,15 @@ body .button {
   border-radius: 15px;
 }
 
-main {
-  margin-bottom: 20px;
-}
-
 /***********************************/
 /***** CUSTOMIZACIÓN NAV BAR *******/
 /***********************************/
 .navbar {
-  background-color: white;
   border-bottom: 3px double #b1aeae;
 }
 
 .navbar .logo {
   width: 90px;
-  border-radius: 50%;
-}
-
-.navbar .logo:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -117,7 +105,7 @@ main {
 
 .foot {
   background-color: #dfdbdb;
-  padding: 15px;
+  padding: 10px;
 }
 
 .foot section {
@@ -196,54 +184,43 @@ main {
 /***********************************/
 /* DEFINICIÓN POR MIXIN*/
 .central, .centralIndex, .centralProducts {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  padding: 10px;
 }
 
 /* DEFINICIÓN POR EXTEND*/
 .centralIndex {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr;
-      grid-template-columns: 2fr;
-  -ms-grid-rows: .1fr 1fr .1fr .4fr;
-      grid-template-rows: .1fr 1fr .1fr .4fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: .1fr 7fr .1fr 2fr;
+      grid-template-rows: .1fr 7fr .1fr 2fr;
       grid-template-areas: "title" "products" "title2" "tips";
 }
 
-.centralIndex .nav-pills {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.centralIndex .packsContainer {
+.centralIndex .productInfo {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: products;
-}
-
-.centralIndex .packsInfo {
-  border: 1px #a5a3a3 solid;
-  border-radius: 15px;
-  padding: 15px;
-  margin-top: 20px;
 }
 
 .centralIndex .tips {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: tips;
-  border: 1px #a5a3a3 solid;
-  border-radius: 15px;
-  padding: 30px 50px 10px 50px;
-  font-style: italic;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .centralIndex .tips h3 {
   display: none;
+}
+
+.centralIndex section {
+  margin-left: 10px;
+  border: 1px #a5a3a3 solid;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 /***********************************/
@@ -267,6 +244,10 @@ main {
   text-align: center;
 }
 
+.leftMenu {
+  display: none;
+}
+
 .myCard {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,7 +259,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px #a5a3a3 solid;
 }
 
 .myCard:hover .imgCard {
@@ -295,7 +277,6 @@ main {
 
 .myCard .imgCard {
   width: 50%;
-  margin-left: 25%;
 }
 
 .myCard ul {
@@ -306,32 +287,64 @@ main {
   text-align: center;
 }
 
+.lastCard {
+  border: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tabMenu {
+  float: left;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+.tablinks {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabContent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
 @media (min-width: 600px) {
   .centralIndex {
     margin-bottom: 0;
-    -ms-grid-columns: 5fr 1fr;
-        grid-template-columns: 5fr 1fr;
-    -ms-grid-rows: .5fr 3fr;
-        grid-template-rows: .5fr 3fr;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: .5fr 7fr;
+        grid-template-rows: .5fr 7fr;
         grid-template-areas: "title title2" "products tips";
   }
-  .centralIndex .packsContainer {
-    padding: 15px;
-    border: 1px #a5a3a3 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-  }
-  .centralIndex .packsInfo {
-    border: none;
-    padding: 0;
-  }
-  .centralIndex .tips {
-    padding: 30px 20px 10px 20px;
-  }
-  .tab-content > .active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .myCard {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -339,45 +352,32 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    margin-bottom: 20px;
   }
   .myCard .imgCard {
+    width: 30%;
     margin-left: 20px;
     margin-right: 20px;
   }
   .myCard .textCard {
-    margin-top: 10px;
     width: 80%;
-  }
-  .tips {
-    font-size: 18px;
+    padding: 10px;
   }
 }
 
 @media (min-width: 992px) {
-  .centralProducts {
-    padding: 15px;
+  .centralTitle, .centralTitle2 {
+    display: none;
   }
-  .packsContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .centralIndex {
+    -ms-grid-columns: 1fr 5fr 2fr;
+        grid-template-columns: 1fr 5fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "leftMenu products tips";
   }
-  .packsContainer .nav-pills {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-right: 10px;
-  }
-  .packsContainer .nav-pills .nav-link {
-    text-align: left;
-  }
-  .centralIndex .packsInfo {
-    border-left: 1px #a5a3a3 solid;
-    border-radius: 0;
-    padding-left: 10px;
+  .centralIndex, .centralProducts {
+    padding: 10px;
   }
   .myCard ul {
     display: inline;
@@ -387,61 +387,57 @@ main {
   .myCard ul li {
     margin-left: 30px;
   }
-  .tips {
-    font-size: 20px;
+  .tips h3 {
+    display: inline;
+  }
+  .tips p {
+    font-style: italic;
+    font-size: 15px;
+    margin: 40px 30px;
+  }
+  .leftMenu {
+    display: inline;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: leftMenu;
+  }
+  .leftMenu ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .leftMenu ul a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .leftMenu ul a :hover {
+    background-color: #dbd9d9;
   }
 }
 
 /***********************************/
 /*** CSS CARDS 2 & INFO PRODUCTOS **/
 /***********************************/
-.centralProducts {
-  min-height: 72vh;
-}
-
 .cardsContainer {
   padding: 15px;
   margin: 10px;
   border: 1px #a5a3a3 solid;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.cardsContainer .myCard {
-  border-bottom: 1px #a5a3a3 solid;
-}
-
-.cardsContainer .lastCard {
-  border: none;
 }
 
 @media (min-width: 600px) {
   .centralProducts {
     margin-bottom: 0;
-    position: relative;
   }
-  .centralProducts .tab-content > .active {
-    -ms-flex-line-pack: center;
-        align-content: center;
+  .cardsContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  .cardsContainer {
     border: none;
     margin: 0;
     padding: 0;
@@ -463,7 +459,7 @@ main {
 
 @media (min-width: 992px) {
   .centralProducts {
-    padding: 15px;
+    padding: 10px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 5fr;
@@ -471,11 +467,6 @@ main {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "leftMenu products";
-  }
-  .centralProducts .nav-pills {
-    margin-top: 20px;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
   }
   .centralProducts section {
     border: 1px #a5a3a3 solid;
@@ -492,41 +483,29 @@ main {
 /* CSS MAIN INFO NOSOTROS & SERVICIOS */
 /**************************************/
 .centralInfo {
-  width: 90%;
-  margin-left: 5%;
-}
-
-.centralInfo .blank {
-  display: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .centralInfo .generalInfo {
-  padding: 15px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#adccd8), to(white));
-  background: linear-gradient(to top, #adccd8, white);
-  -webkit-box-shadow: 10px 10px 5px #8c8d8d;
-          box-shadow: 10px 10px 5px #8c8d8d;
-  margin-top: 50px;
-  margin-bottom: 70px;
-}
-
-.terapeutas .imgCard {
-  border-radius: 50%;
-}
-
-@media (min-width: 600px) {
-  .centralInfo {
-    width: 90%;
-    margin-left: 5%;
-    -webkit-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 60px;
-            column-gap: 60px;
-  }
-  .centralInfo .blank {
-    display: block;
-    height: 300px;
-  }
+  padding: 10px;
+  border: 3px #a5a3a3;
+  border-style: outset;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
 }
 
 /***********************************/
@@ -534,14 +513,9 @@ main {
 /***********************************/
 .infoRegistro {
   margin-top: 50px;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
-  height: 130vh;
-}
-
-.infoRegistro .title {
-  text-shadow: 1px 1px 1px #b0b3b6;
-  color: #585d6d;
+  margin-bottom: 200px;
 }
 
 .infoRegistro .formsContainer {
@@ -556,7 +530,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .infoRegistro .formsContainer .login {
@@ -568,55 +542,13 @@ main {
   margin-top: 30px;
 }
 
-.infoRegistro .formsContainer .twoInputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .infoRegistro .formsContainer .entrada {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.infoRegistro .formsContainer .entrada label {
-  margin-right: 10px;
-}
-
-.infoRegistro .formsContainer .entrada input {
-  border: none;
-  border-bottom: 1px #a5a3a3 solid;
+  margin-bottom: 10px;
 }
 
 .infoRegistro .formsContainer .entrada .infoBox {
-  padding: 4px 8px;
-  border: 1px #a5a3a3 solid;
-  border-radius: 50%;
-  font-size: 12px;
-  color: #868585;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color: white;
-  cursor: help;
-}
-
-.infoRegistro .formsContainer .entrada .textInfo {
-  display: none;
-  width: 200px;
-  background-color: #e9e6e6;
-  color: #a1a0a0;
-  font-size: 15px;
-  text-align: center;
-  z-index: 3;
-  position: absolute;
-  right: 10px;
-}
-
-.infoRegistro .formsContainer .entrada .infoBox:hover + .textInfo {
-  display: inline;
+  padding: 5px 10px;
+  background-color: #c4bebe;
 }
 
 .infoRegistro .formsContainer .checkLabel {
@@ -629,56 +561,30 @@ main {
   text-align: center;
 }
 
-@media (min-height: 810px) {
-  .infoRegistro {
-    height: 105vh;
-  }
-}
-
-@media (min-height: 900px) {
-  .infoRegistro {
-    height: 90vh;
-  }
-}
-
-@media (min-height: 1000px) {
-  .infoRegistro {
-    height: 67.5vh;
-  }
-}
-
 @media (min-width: 600px) {
   .infoRegistro {
-    height: 100vh;
+    margin-bottom: 0;
   }
   .infoRegistro .formsContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .infoRegistro .formsContainer .twoInputs div {
-    margin-top: 20px;
-  }
-  .infoRegistro .formsContainer .entrada .infoBox:hover + .textInfo {
-    display: block;
-    float: right;
-    z-index: 3;
-  }
-  .infoRegistro .formsContainer .line {
-    height: 500px;
-    border: 1px #a5a3a3 solid;
+  .infoRegistro .formsContainer .entrada label {
+    margin-right: 10px;
   }
   .infoRegistro .formsContainer .login {
     border-bottom: none;
   }
-}
-
-@media (min-width: 724px) {
-  .infoRegistro .formsContainer .twoInputs div {
-    margin-top: 0;
+  .infoRegistro .formsContainer .registro {
+    border-left: 1px #a5a3a3 solid;
+  }
+  .infoRegistro .formsContainer .login, .infoRegistro .formsContainer .registro {
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
