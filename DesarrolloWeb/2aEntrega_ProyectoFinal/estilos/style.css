@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    color:rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    margin-bottom: 150px;
+}
+
+h1,h2,h3,h4 { 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{ font-size: 30px;}
+h2{ font-size: 25px;}
+h3{ font-size: 20px;}
+h4{ font-size: 15px;}
+
+.button{
+    background: linear-gradient(to top,rgb(58, 92, 119),white);
+    padding: 5px 10px;
+    border-style:hidden;
+    border-radius: 15px;
+}
+
+.logo{
+    width: 90px;
+}
+
+.navbar{
+    border-bottom: 3px double rgb(177, 174, 174);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 20px 20px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+@media (max-width:400px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding: 20px 10px;
+    }
+} 
+
+@media (min-width:768px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding: 20px 30px;
+    }
+}
+
+/**********************/
+/**********************/
+/**********************/
+
+.carousel-item .carousel-caption{
+    color: black;
+}
+
+/**********************/
+/**********************/
+/**********************/
+
+.ubicacion, .registroRapido{
+    display: none;
+}
+
+.foot{
+    background-color:rgb(187, 181, 181);    
+    padding: 10px;
+}
+
+.icons{
+    margin-top: 15px;
+}
+
+.icons img {
+    width:20px;
+    height: 20px;
+}
+
+.foot section{
+    font-size: 12px;
+}
+
+.foot section h4,p,label,input{
+    color: rgb(61, 61, 80);
+}
+
+.foot section p{
+    margin-bottom: 5px;
+    color: rgb(61, 61, 80);
+}
+ 
+@media (max-width:400px) {
+    .foot .col-6{
+        width: 30%;
+    }
+} 
+
+@media (min-width:600px) {
+    .foot section{
+        padding-left: 70px;
+    }
+}
+
+@media (min-width:768px) {
+    .ubicacion{
+        display: inline;
+    }
+
+    .foot section{
+        padding-left: 50px;
+    }
+}
+
+@media (min-width:992px) {
+    .registroRapido{
+        display: inline;
+    }
+
+    .foot section{
+        padding-left: 20px;
+    }
+
+    .registroRapido form{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .registroRapido .entrada{
+        margin-bottom: 5px;
+    }
+    .registroRapido .entrada label{
+        margin-right: 10px;
+    } 
+}
+
+/**********************/
+/**********************/
+/**********************/
+
+.leftMenu{
+    display: none;
+}
+
+.centralTitle, .centralTitle2{
+    padding: 20px ;
+    text-align: center;
+}
+
+.centralIndex{
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 7fr 1fr;
+    grid-template-areas: 
+        "title"
+        "products"
+        "title2"
+        "tips"
+    ;
+}
+
+.centralTitle{
+    grid-area: title;
+}
+
+.centralTitle2{
+    grid-area: title2;
+}
+
+.productInfo{
+    grid-area: products;
+}
+
+.tips{
+    grid-area: tips;
+}
+
+.tips h3{
+    display: none;
+}
+
+.centralIndex section{
+    margin-left: 10px;
+    border: 1px rgb(165, 163, 163) solid;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.myCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.myCard:hover .imgCard{
+    transform: scale(1.06);
+    transition: all .5s;
+}
+
+.myCard .imgCard,h3,p,ul, .buttonCard{
+    margin-bottom:20px ;
+    color: black;
+}
+
+.lastCard{
+    border: none;
+}
+
+.imgCard{
+    width: 50%;   
+    border-radius: 15px;
+}
+
+.myCard ul{
+    display: none;
+}
+
+.myCard .buttonCard{
+    text-align: center;
+}
+
+
+@media (min-width:600px) {
+    .centralIndex{
+        margin-bottom: 0;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: .5fr 7fr;
+        grid-template-areas:             
+            "title title2"
+            "products tips"
+        ;
+    }
+
+    .myCard{
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-bottom: 20px;        
+    }
+
+    .imgCard{
+        width: 100%;
+        border: 1px solid rgb(128, 128, 128);
+    }
+
+    .textCard {
+        padding: 10px;
+    }
+
+}
+
+
+@media (min-width:992px) {
+    .centralIndex .centralTitle,.centralTitle2{
+        display: none;
+    }
+    .centralIndex{    
+        grid-template-columns: 1fr 5fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:             
+            "leftMenu products tips"
+        ;
+    }    
+
+    .centralIndex,.centralProducts section{
+        margin-left: 10px;
+        border: 1px rgb(165, 163, 163) solid;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .myCard ul{
+        display: inline;
+        padding: 0;
+        margin-right: 20px;
+    }
+
+    .myCard ul li{
+        margin-left: 30px;
+    }
+
+    .tips h3{
+        display: inline;
+    }
+
+    .tips p{
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 30px;
+    }
+    
+
+    .leftMenu{
+        display: inline;
+        grid-area: leftMenu;
+    }
+
+    .leftMenu ul{
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .leftMenu a{
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    
+    .leftMenu a:hover{
+        background-color: rgb(219, 217, 217);
+    }
+
+}
+
+/**********************/
+/**********************/
+/**********************/
+
+.centralProducts{
+    margin-top: 20px;
+    margin-bottom: 200px;
+    padding: 10px;
+}
+
+.cardsContainer {
+    padding: 15px;
+    margin: 10px;
+    border: 1px rgb(165, 163, 163) solid;
+    border-radius: 15px;
+    margin-bottom: 200px;
+}
+
+@media (min-width:600px) {
+
+    .centralProducts{
+        margin-bottom: 0;
+    }
+
+    .cardsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cardsContainer .myCard{
+        flex-direction: column;
+        width: 30%;
+        border: 1px rgb(165, 163, 163) solid;
+        border-radius: 15px;
+    }
+
+    .cardsContainer .imgCard{
+        margin-top: 10px;
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    
+    .centralProducts{
+        padding: 0;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:             
+            "leftMenu products"
+        ;
+    }   
+
+}
+
+
+/**********************/
+/**********************/
+/**********************/
+
+.centralInfo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.generalInfo{
+    padding: 10px;
+    border: 3px rgb(165, 163, 163) ;
+    border-style:outset;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width:600px) {
+
+    .cardsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/**********************/
+/**********************/
+/**********************/
+.infoRegistro{
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.formsContainer{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.formsContainer .entrada{
+    margin-bottom: 10px;
+}
+
+.formsContainer .buttonCard{
+    text-align: center;
+}
+
+.login{
+    border-bottom: 1px solid gray;
+}
+
+.registro{
+    margin-top: 30px;
+}
+
+.infoBox{
+    padding: 5px 10px;
+    background-color: rgb(196, 190, 190);
+}
+
+
+@media (min-width:600px) {
+    .formsContainer{                
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .login{
+        border-bottom: none;
+    }
+
+    .registro{
+        border-left: 1px solid gray;
+    }
+
+    .login,.registro{
+        padding: 20px;
+    }
+    
+    .infoRegistro{
+        margin-bottom: 0;
+    }
+}

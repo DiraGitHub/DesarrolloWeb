@@ -1,0 +1,282 @@
+@import "variables";
+@import "fuentes";
+@import "generales";
+@import "index";
+@import "productos";
+@import "registro";
+
+
+.productInfo{
+    grid-area: products;
+}
+
+.tips{
+    grid-area: tips;
+}
+
+.centralTitle{
+    grid-area: title;
+}
+
+.centralTitle2{
+    grid-area: title2;
+}
+
+
+
+/******************************/
+/************NAV BAR***********/
+/******************************/
+
+
+@media (max-width:400px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding: 20px 10px;
+    }
+} 
+
+@media (min-width:768px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding: 20px 30px;
+    }
+}
+
+
+/******************************/
+/**********FOOTER**************/
+/******************************/
+ 
+@media (min-width:600px) {
+    .foot section{
+        padding-left: 70px;
+    }
+}
+
+@media (min-width:768px) {
+    .ubicacion{
+        display: inline;
+    }
+
+    .foot section{
+        padding-left: 50px;
+    }
+}
+
+@media (min-width:992px) {
+    .foot{
+        section{
+            padding-left: 20px;
+        }
+        .registroRapido{
+            display: inline;
+            form{
+                display: flex;
+                align-items: flex-end;
+                .entrada{
+                    margin-bottom: 5px;
+                    label{
+                        margin-right: 10px;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+/**********************/
+/*********CENTRAL********/
+/**********************/
+
+
+@media (min-width:600px) {
+    .centralIndex{
+        margin-bottom: 0;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: .5fr 7fr;
+        grid-template-areas:             
+            "title title2"
+            "products tips"
+        ;
+    }
+
+    .myCard{
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .imgCard{
+            width: 100%;            
+        }
+    
+        .textCard {
+            padding: 10px;
+        }
+    }
+}
+
+
+@media (min-width:992px) {
+    .centralTitle,.centralTitle2{
+        display: none;
+    }
+
+    .centralIndex{    
+        grid-template-columns: 1fr 5fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:             
+            "leftMenu products tips"
+        ;
+    }
+
+    .centralIndex,.centralProducts{        
+        padding: 10px;
+    }
+
+    .myCard ul{
+        display: inline;
+        padding: 0;
+        margin-right: 20px;
+        li{
+            margin-left: 30px;
+        }
+    }
+
+    .tips{
+        font-family: "PT Serif",serif;
+        h3{ display: inline;}
+        p{
+            font-style: italic;
+            font-size: 12px;
+            margin-top: 30px;
+        }
+    }
+
+    .leftMenu{
+        display: inline;
+        grid-area: leftMenu;
+        ul{
+            list-style: none;
+            padding-left: 0;
+            a{
+                display: block;
+                padding: 15px 20px;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                :hover{
+                    background-color: rgb(219, 217, 217);
+                }
+            }
+        }
+    }
+    
+}
+
+/**********************/
+/*******PRODUCTOS*********/
+/**********************/
+
+
+@media (min-width:600px) {
+
+    .centralProducts{
+        margin-bottom: 0;
+    }
+
+    .cardsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        .myCard{
+            flex-direction: column;
+            width: 30%;
+            border: $borderColor;
+            border-radius: 15px;
+
+            .imgCard{
+                margin-top: 10px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width:992px) {
+    
+    .centralProducts{
+        padding: 10px;
+        padding-right: 10px;        
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:             
+            "leftMenu products"
+        ;        
+        section{
+            border: $borderColor;
+            padding-top: 15px;
+            border-radius: 15px;
+            margin-left: 15px;
+        }
+
+        .centralTitle{
+            display: inline;
+        }
+    }   
+
+}
+
+
+/**********************/
+/*******OTRO CENTRAL*********/
+/**********************/
+
+
+@media (min-width:600px) {
+
+    .cardsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/**********************/
+/**********************/
+/**********************/
+
+
+@media (min-width:600px) {
+    .infoRegistro{
+        margin-bottom: 0;    
+        .formsContainer{                
+            flex-direction: row;
+            justify-content: center;
+
+            .entrada label{
+                margin-right: 10px;
+            }
+
+
+            .login{
+                border-bottom: none;
+            }
+        
+            .registro{
+                border-left: $borderColor;
+            }
+
+            .login,.registro{
+                padding: 20px;
+            }
+
+        }
+    }
+}

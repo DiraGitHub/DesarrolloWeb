@@ -1,0 +1,12 @@
+$defBorde: 1px rgb(165, 163, 163) solid;
+$defPadding: 10px;
+$defFootColor:  rgb(61, 61, 80);
+$defFontSize:30px;
+
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-size: $defFontSize;
+        $defFontSize:$defFontSize - 5;
+    }
+}
+

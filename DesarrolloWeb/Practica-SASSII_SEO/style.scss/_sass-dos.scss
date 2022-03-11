@@ -1,0 +1,70 @@
+$defBorde: 1px rgb(165, 163, 163) solid;
+$defPadding: 10px;
+$defFootColor:  rgb(61, 61, 80);
+$defFontSize:30px;
+
+//Definición de tamaño en titulos del h1 al h4 que son los utilizados en el proyecto
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:bold;
+        font-size: $defFontSize;
+        $defFontSize:$defFontSize - 5;
+    }
+}
+
+//Definición de map para el estilo de la clase "button"
+$buttonStile: (
+    backcolor: linear-gradient(to top,rgb(34, 219, 65),white),
+    paddingDef: 5px 10px,
+    styleBorder: hidden,
+    radiusBorder: 15px
+);
+
+@mixin imgIconSize($size){
+    width: $size;
+    height: $size;
+}
+
+@mixin centralStyle($marginTop,$marginBottom,$padding) {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+    padding: $padding;
+}
+
+/************** SOLO PRA JUGAR ***********************/
+
+$base-color: #036;
+
+@for $i from 1 through 3 {
+  .leftMenu ul li:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+
+$textColor:  #2082d1 ;
+$paquetes:paquete1,paquete2,paquete3,paquete4,paquete5;
+
+@each $paquete in $paquetes {
+    ##{$paquete} p {
+        color:$textColor;
+        $textColor:$textColor - 30%;
+    }
+}
+
+
+$paquetesUL: (
+    paquete1: #ff00aa,
+    paquete2: #1cc0aa,
+    paquete3: #1448d6,
+    paquete4: #e67010,
+    paquete5: #5943bd
+);
+
+@each $paquete,$color in $paquetesUL {
+    ##{$paquete} li {
+        color: $color;
+        //$textColor:$textColor - 30%;
+    }
+}
+

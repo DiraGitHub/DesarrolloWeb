@@ -1,0 +1,545 @@
+@charset "UTF-8";
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/***********************************/
+/*********** CSS GENERAL ***********/
+/***********************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-bottom: 150px;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* SE MODIFICA DEFINICIÓN PARA HACERLO CON UN FOR Y UNA OPERACIÓN ARITMETICA*/
+  /* SE MODIFICA DEFINICIÓN PARA HACERLO MEDIANTE UN MAP*/
+}
+
+body .button {
+  background: -webkit-gradient(linear, left bottom, left top, from(#576ce6), to(white));
+  background: linear-gradient(to top, #576ce6, white);
+  padding: 5px 10px;
+  border-style: hidden;
+  border-radius: 15px;
+}
+
+/***********************************/
+/***** CUSTOMIZACIÓN NAV BAR *******/
+/***********************************/
+.navbar {
+  border-bottom: 3px double #b1aeae;
+}
+
+.navbar .logo {
+  width: 90px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 20px 20px;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 400px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 20px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 20px 30px;
+  }
+}
+
+/***********************************/
+/***** CUSTOMIZACIÓN CAROUSEL ******/
+/***********************************/
+.carousel-item .carousel-caption {
+  color: black;
+}
+
+/***********************************/
+/************ CSS FOOTER ***********/
+/***********************************/
+.ubicacion, .registroRapido {
+  display: none;
+}
+
+.foot {
+  background-color: #dfdbdb;
+  padding: 10px;
+}
+
+.foot section {
+  font-size: 12px;
+}
+
+.foot section h4, .foot section label, .foot section input {
+  color: #3d3d50;
+}
+
+.foot section p {
+  margin-bottom: 5px;
+  color: #3d3d50;
+}
+
+.foot section .socialMedia {
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.foot section .socialMedia i {
+  color: #151616;
+}
+
+.foot section .icons {
+  margin-top: 15px;
+}
+
+.foot section .icons img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 600px) {
+  .foot section {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ubicacion {
+    display: inline;
+  }
+  .foot section {
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .foot section {
+    padding-left: 20px;
+  }
+  .foot .registroRapido {
+    display: inline;
+  }
+  .foot .registroRapido form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .foot .registroRapido form .entrada {
+    margin-bottom: 5px;
+  }
+  .foot .registroRapido form .entrada label {
+    margin-right: 10px;
+  }
+}
+
+/***********************************/
+/******* CSS MAIN INFO INDEX *******/
+/***********************************/
+/* DEFINICIÓN POR MIXIN*/
+.central, .centralIndex, .centralProducts {
+  margin-top: 20px;
+  margin-bottom: 200px;
+  padding: 10px;
+}
+
+/* DEFINICIÓN POR EXTEND*/
+.centralIndex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: .1fr 7fr .1fr 2fr;
+      grid-template-rows: .1fr 7fr .1fr 2fr;
+      grid-template-areas: "title" "products" "title2" "tips";
+}
+
+.centralIndex .productInfo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: products;
+}
+
+.centralIndex .tips {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: tips;
+}
+
+.centralIndex .tips h3 {
+  display: none;
+}
+
+.centralIndex section {
+  margin-left: 10px;
+  border: 1px #a5a3a3 solid;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/***********************************/
+/*** CSS INFO PRINCIPAL GENERAL ****/
+/****** CSS CARDS PRIMER PARTE *****/
+/***********************************/
+.centralTitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.centralTitle2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: title2;
+}
+
+.centralTitle, .centralTitle2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.leftMenu {
+  display: none;
+}
+
+.myCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px #a5a3a3 solid;
+}
+
+.myCard:hover .imgCard {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.myCard .imgCard, .myCard h3, .myCard p, .myCard ul, .myCard .buttonCard {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.myCard .imgCard {
+  width: 50%;
+}
+
+.myCard ul {
+  display: none;
+}
+
+.myCard .buttonCard {
+  text-align: center;
+}
+
+.lastCard {
+  border: none;
+}
+
+@media (min-width: 600px) {
+  .centralIndex {
+    margin-bottom: 0;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: .5fr 7fr;
+        grid-template-rows: .5fr 7fr;
+        grid-template-areas: "title title2" "products tips";
+  }
+  .myCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+  .myCard .imgCard {
+    width: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .myCard .textCard {
+    width: 80%;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .centralTitle, .centralTitle2 {
+    display: none;
+  }
+  .centralIndex {
+    -ms-grid-columns: 1fr 5fr 2fr;
+        grid-template-columns: 1fr 5fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "leftMenu products tips";
+  }
+  .centralIndex, .centralProducts {
+    padding: 10px;
+  }
+  .myCard ul {
+    display: inline;
+    padding: 0;
+    margin-right: 20px;
+  }
+  .myCard ul li {
+    margin-left: 30px;
+  }
+  .tips h3 {
+    display: inline;
+  }
+  .tips p {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+  .leftMenu {
+    display: inline;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: leftMenu;
+  }
+  .leftMenu ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .leftMenu ul a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .leftMenu ul a :hover {
+    background-color: #dbd9d9;
+  }
+}
+
+/***********************************/
+/*** CSS CARDS 2 & INFO PRODUCTOS **/
+/***********************************/
+.cardsContainer {
+  padding: 15px;
+  margin: 10px;
+  border: 1px #a5a3a3 solid;
+  border-radius: 15px;
+}
+
+@media (min-width: 600px) {
+  .centralProducts {
+    margin-bottom: 0;
+  }
+  .cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cardsContainer .myCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    border: 1px #a5a3a3 solid;
+    border-radius: 15px;
+  }
+  .cardsContainer .myCard .imgCard {
+    margin-top: 10px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .centralProducts {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 5fr;
+        grid-template-columns: 1fr 5fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "leftMenu products";
+  }
+  .centralProducts section {
+    border: 1px #a5a3a3 solid;
+    padding-top: 15px;
+    border-radius: 15px;
+    margin-left: 15px;
+  }
+  .centralProducts .centralTitle {
+    display: inline;
+  }
+}
+
+/**************************************/
+/* CSS MAIN INFO NOSOTROS & SERVICIOS */
+/**************************************/
+.centralInfo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.centralInfo .generalInfo {
+  padding: 10px;
+  border: 3px #a5a3a3;
+  border-style: outset;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+/***********************************/
+/***** CSS MAIN INFO REGISTRO ******/
+/***********************************/
+.infoRegistro {
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.infoRegistro .formsContainer {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.infoRegistro .formsContainer .login {
+  margin-top: 30px;
+  border-bottom: 1px #a5a3a3 solid;
+}
+
+.infoRegistro .formsContainer .registro {
+  margin-top: 30px;
+}
+
+.infoRegistro .formsContainer .entrada {
+  margin-bottom: 10px;
+}
+
+.infoRegistro .formsContainer .entrada .infoBox {
+  padding: 5px 10px;
+  background-color: #c4bebe;
+}
+
+.infoRegistro .formsContainer .checkLabel {
+  margin-left: 10px;
+}
+
+.infoRegistro .formsContainer .buttonCard {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .infoRegistro {
+    margin-bottom: 0;
+  }
+  .infoRegistro .formsContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .infoRegistro .formsContainer .entrada label {
+    margin-right: 10px;
+  }
+  .infoRegistro .formsContainer .login {
+    border-bottom: none;
+  }
+  .infoRegistro .formsContainer .registro {
+    border-left: 1px #a5a3a3 solid;
+  }
+  .infoRegistro .formsContainer .login, .infoRegistro .formsContainer .registro {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

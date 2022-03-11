@@ -1,0 +1,664 @@
+
+@import "sass-dos";
+
+/***********************************/
+/*********** CSS GENERAL ***********/
+/***********************************/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color:rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    .button{
+        background: map-get($buttonStile,backcolor);
+        padding: map-get($buttonStile,paddingDef);
+        border-style:map-get($buttonStile,styleBorder);
+        border-radius: map-get($buttonStile,radiusBorder);
+    }
+}
+
+main{
+    margin-bottom: 20px;
+}
+
+/***********************************/
+/***** CUSTOMIZACIÓN NAV BAR *******/
+/***********************************/
+
+.navbar{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 3px double rgb(177, 174, 174);
+    .logo{
+        width: 90px;
+        border-radius: 50%;
+
+        &:hover{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+    }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 20px 20px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+@media (max-width:400px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding: 20px 10px;
+    }
+} 
+
+@media (min-width:768px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding: 20px 30px;
+    }
+}
+
+/***********************************/
+/***** CUSTOMIZACIÓN CAROUSEL ******/
+/***********************************/
+
+.carousel-item .carousel-caption{
+    color: rgb(0, 0, 0);
+}
+
+/***********************************/
+/************ CSS FOOTER ***********/
+/***********************************/
+
+.ubicacion, .registroRapido{
+    display: none;
+}
+
+.foot{
+    background-color:rgb(223, 219, 219);    
+    padding: $defPadding;
+    section{
+        font-size: 15px;
+
+        h4,label,input{
+            color: $defFootColor;
+        }
+
+        p{
+            margin-bottom: 5px;
+            color: $defFootColor
+        }
+
+        .socialMedia{
+            margin-top: 15px;
+            font-size: 30px;
+
+            a{
+                margin-right: 20px;    
+                color: rgb(21, 22, 22);
+            }
+        }
+
+        .icons{
+            margin-top: 15px;
+            
+            img {
+                margin-right: 10px;
+                @include imgIconSize(50px); //USANDO MIXIN
+            }
+        }
+    }
+}
+ 
+@media (min-width:600px) {
+    .foot section{
+        padding-left: 70px;
+    }
+}
+
+@media (min-width:768px) {
+    .ubicacion{
+        display: inline;
+    }
+
+    .foot section{
+        padding-left: 50px;
+    }
+}
+
+@media (min-width:992px) {
+    .foot{
+        section{
+            padding-left: 20px;
+        }
+        .registroRapido{
+            display: inline;
+            form{
+                display: flex;
+                align-items: flex-end;
+                .entrada{
+                    margin-bottom: 5px;
+                    label{
+                        margin-right: 10px;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+/***********************************/
+/******* CSS MAIN INFO INDEX *******/
+/***********************************/
+
+/* DEFINICIÓN POR MIXIN*/
+.central{
+    @include centralStyle(0px,20px,$defPadding);
+}
+
+/* DEFINICIÓN POR EXTEND*/
+.centralIndex{
+    @extend .central;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: .1fr 1fr .1fr .4fr;
+    grid-template-areas: 
+        "title"
+        "products"
+        "title2"
+        "tips"
+    ;
+
+    .nav-pills{
+        justify-content:space-around;
+    }
+
+    .packsContainer{
+        grid-area: products;
+    }
+
+    .packsInfo{
+        border: $defBorde;
+        border-radius: 15px;
+        padding: $defPadding;
+        margin-top: 20px;
+    }
+
+    .tips{
+        grid-area: tips;
+        border: $defBorde;
+        border-radius: 15px;
+        padding: 30px 50px 10px 50px;
+        font-style: italic;
+        align-content: center;
+
+        h3{
+            display: none;
+        }
+    }
+
+}
+
+/***********************************/
+/*** CSS INFO PRINCIPAL GENERAL ****/
+/****** CSS CARDS PRIMER PARTE *****/
+/***********************************/
+
+.centralTitle{
+    grid-area: title;
+}
+
+.centralTitle2{
+    grid-area: title2;
+}
+
+.centralTitle, .centralTitle2{
+    padding: 20px ;
+    text-align: center;
+}
+
+.myCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+    &:hover .imgCard{
+        transform: scale(1.06);
+        transition: all .5s;
+    }
+
+    .imgCard,h3,p,ul, .buttonCard{
+        margin-bottom:20px ;
+        color: rgb(0, 0, 0);
+    }
+
+    .imgCard{
+        width: 50%;
+       margin-left: 25%;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .buttonCard{
+        text-align: center;
+    }
+}
+
+@media (min-width:600px) {
+    .centralIndex{
+        margin-bottom: 0;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: .5fr 3fr;
+        grid-template-areas:             
+            "title title2"
+            "products tips"
+        ;
+
+        .packsContainer{
+            padding: $defPadding;
+            border: $defBorde;
+            border-radius: 15px;
+            margin-right: 10px;
+        }
+       
+        .packsInfo{
+            border: none;
+            padding: 0;
+        }
+
+        .tips{
+            padding: 30px 20px 10px 20px;
+    
+        }
+    }
+
+    .tab-content > .active{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-content: center;
+    
+    }
+
+    .myCard{
+        .imgCard{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    
+        .textCard {
+            margin-top: 10px;
+            width: 80%;
+        }
+    }
+
+    .tips{
+        font-size: 18px;
+    }
+    
+}
+
+
+@media (min-width:992px) {
+    .centralProducts{        
+        padding: $defPadding;
+    }
+
+    .packsContainer{
+        display: flex;
+
+        .nav-pills{
+            flex-direction: column;
+            margin-right: 10px;
+            .nav-link{
+                text-align: left;
+            }
+        }
+    }
+
+    .centralIndex{
+        .packsInfo{
+            border-left: $defBorde;
+            border-radius: 0;
+            padding-left: 10px;
+        }
+    }
+
+    .myCard {
+
+        ul{
+            display: inline;
+            padding: 0;
+            margin-right: 20px;
+
+            li{
+                margin-left: 30px;
+            }
+        }
+
+    }
+
+    .tips{
+        font-size: 20px;
+    }
+
+    
+}
+
+/***********************************/
+/*** CSS CARDS 2 & INFO PRODUCTOS **/
+/***********************************/
+
+//DEFINICIÓN POR EXTEND
+.centralProducts{
+    @extend .central;
+    min-height: 72vh;
+}
+
+.cardsContainer {
+    padding: 15px;
+    margin: 10px;
+    border: $defBorde;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .myCard{
+        border-bottom: $defBorde;
+    }
+
+    .lastCard{
+        border: none;
+    }
+}
+
+@media (min-width:600px) {
+
+    .centralProducts{
+        margin-bottom: 0;
+        position: relative;
+
+        .tab-content > .active{
+         
+            align-content: center;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        
+        }
+    }
+
+    .cardsContainer{
+       
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        .myCard{
+            flex-direction: column;
+            width: 30%;
+            border: $defBorde;
+            border-radius: 15px;
+
+            .imgCard{
+                margin-top: 10px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width:992px) {
+    
+    .centralProducts{
+        padding: $defPadding;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:             
+            "leftMenu products"
+        ;        
+
+        .nav-pills{
+
+            //display: block;
+            margin-top: 20px;
+            align-content: flex-start;
+           
+        }
+
+        section{
+            border: $defBorde;
+            padding-top: 15px;
+            border-radius: 15px;
+            margin-left: 15px;
+        }
+
+        .centralTitle{
+            display: inline;
+        }
+    }   
+
+}
+
+
+/**************************************/
+/* CSS MAIN INFO NOSOTROS & SERVICIOS */
+/**************************************/
+
+.centralInfo{
+    width: 90%;
+    margin-left: 5%;
+    
+    .blank{
+        display: none;
+    }
+
+    .generalInfo{
+        padding: $defPadding;
+        background: linear-gradient(to top,rgb(173, 204, 216),white);        
+        box-shadow: 10px 10px 5px rgb(140, 141, 141);
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+
+    
+    
+}
+
+.terapeutas .imgCard {
+    border-radius: 50%;
+}
+
+@media (min-width:600px) {
+    .centralInfo{
+        width: 90%;
+        margin-left: 5%;
+        column-count: 2;
+        column-gap: 60px;
+        
+        .blank{
+            display: block;
+            height: 300px;
+        }
+    }
+}
+
+/***********************************/
+/***** CSS MAIN INFO REGISTRO ******/
+/***********************************/
+.infoRegistro{
+    margin-top: 50px;
+    padding: $defPadding;
+    text-align: center;
+    height: 130vh;
+
+    .title{
+        text-shadow: 1px 1px 1px rgb(176, 179, 182);
+        color:rgb(88, 93, 109) ;
+    }
+
+    .formsContainer{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        
+        .login{
+            margin-top: 30px;
+            border-bottom: $defBorde;
+        }
+
+        .registro{
+            margin-top: 30px;
+        }
+
+        .twoInputs{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .entrada{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            
+            label{
+                margin-right: 10px;
+            }
+            
+            input{
+                border: none;
+                border-bottom: $defBorde;
+            }
+
+            .infoBox{
+                padding: 4px 8px;
+                border: $defBorde;
+                border-radius: 50%;
+                font-size: 12px;
+                color: rgb(134, 133, 133);
+                margin-left: 5px;
+                margin-right: 5px;
+                background-color: rgb(255, 255, 255);
+                cursor:help;
+
+                
+            } 
+
+            .textInfo{
+                display: none;
+                width: 200px;
+                background-color: rgb(233, 230, 230);
+                color: rgb(161, 160, 160);
+                font-size: 15px;
+                text-align: center;
+                z-index: 3;
+                position:absolute;
+                right: 10px;
+            }
+
+            .infoBox:hover + .textInfo{
+                display: inline;
+            }
+
+        }
+
+        .checkLabel {
+            margin-left: 10px;
+        }
+
+        .buttonCard{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+    }
+}
+
+
+@media (min-height:810px) {
+    .infoRegistro{
+        height: 105vh;
+    }
+}
+
+@media (min-height:900px) {
+    .infoRegistro{
+        height: 90vh;
+    }
+}
+@media (min-height:1000px) {
+    .infoRegistro{
+        height: 67.5vh;
+    }
+}
+
+
+
+@media (min-width:600px) {
+    .infoRegistro{
+        height: 100vh;
+
+        .formsContainer{                
+            flex-direction: row;
+            justify-content:space-around;
+
+            .twoInputs div{
+                margin-top: 20px;
+            }
+
+            .entrada{
+                
+                .infoBox:hover + .textInfo{
+                    display: block;
+                    float: right;
+                    z-index: 3;
+                }
+
+                
+            }
+
+            .line{
+                height: 500px;
+                border: $defBorde;
+            }
+
+            .login{
+                border-bottom: none;
+            }
+
+           
+        }
+    }
+}
+
+@media (min-width:724px) {
+    .infoRegistro{
+        .formsContainer{                
+            .twoInputs div{
+                margin-top: 0;
+            }
+        }
+    }
+}
