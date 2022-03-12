@@ -9,9 +9,7 @@ do{
     if(isNaN(inNum)){
         alert("Debe ingresar un valor numérico.");
     }
-    else
-        break;
-} while(1);
+} while(isNaN(inNum));
 
 
 document.write("<table><tr><th>ID</th><th>NOMBRE</th><th>TIPO</th></tr>");
