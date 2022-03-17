@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Desafío 1</title>
+</head>
+<body>
+    <header>
+        <h1>¿Dónde quedo la bolita?</h1>
+    </header>
+    
+    <main>
+        <div>
+            <button class="buttonGame" id="startGame" onclick="main()">JUGAR</button>
+        </div>
+
+        <div class="ballsContainer">
+            <div class="tapa" id="tapa1" onclick="showResult(1)">
+                <div class="ball" id="ball1" ></div>
+            </div>
+            <div class="tapa" id="tapa2" onclick="showResult(2)">
+                <div class="ball" id="ball2"></div>
+            </div>
+            <div class="tapa" id="tapa3"onclick="showResult(3)">
+                <div class="ball" id="ball3"></div>
+            </div>
+            <div class="tapa" id="tapa4" onclick="showResult(4)">
+                <div class="ball" id="ball4"></div>
+            </div>
+            <div class="tapa" id="tapa5" onclick="showResult(5)">
+                <div class="ball" id="ball5"></div>
+            </div>
+        </div>
+
+        <div>
+            <button class="buttonGame" id="restartGame" onclick="clearScreen()">REINICIAR</button>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(17, 141, 73);
+    color: rgb(255, 255, 255);
+}
+
+.ballsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tapa{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(farthest-corner at 60% 70%,rgb(5, 5, 5),rgb(59, 59, 59),rgb(14, 13, 13),rgb(156, 61, 10),rgb(250, 183, 147));
+    z-index: 0;
+    border-radius: 75% 45% 80% 40%;
+    position: relative;
+    display: none;
+}
+
+.ball{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(farthest-corner at 20% 70%,rgb(165, 1, 1),rgb(205, 1, 1),rgb(255, 1, 1),rgb(255, 255, 255));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    top: 60%;
+    left: 50%;
+}
+
+.buttonGame{
+    padding: 15px 20px;
+    border-radius: 15%;
+    border-style:hidden;
+    background: linear-gradient(to top, rgb(3, 129, 77),rgb(224, 222, 222));
+    margin: 30px;
+}
+
+#restartGame{
+    display: none;
+}
