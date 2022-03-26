@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 15px;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(122, 31, 49);
+    color: rgb(255, 255, 255);
+}
+
+#cardsContainer{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.myCard{
+    width: 25%;
+    border: 1px solid gray;
+    border-radius: 10%;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+.myCard img{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.myCard h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.myCard button{
+    margin-top: 25px;
+    margin-left: 70%;
+    padding: 10px 10px;
+    border-radius: 15%;
+    background: linear-gradient(to top, rgb(65, 107, 163),rgb(246, 247, 248));
+    border-style: hidden;
+}
+
+.funciones{
+    margin-top: 25px;
+    text-align: right;
+}
+
+.funciones span{
+    color: rgb(32, 32, 241);
+    margin-left: 25%;
+    cursor: pointer;
+}
+
+.agregar{
+    background: rgb(67, 167, 67);
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 30px;
+    font-weight:bolder;
+    color: white;
+    border-radius: 50%;
+    margin-left: 85%;
+}
