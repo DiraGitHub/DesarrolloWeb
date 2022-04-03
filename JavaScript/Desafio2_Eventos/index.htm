@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Desafío 1</title>
+</head>
+<body>
+    <header>
+        <h1>BUSCA MINAS</h1>
+    </header>
+    
+    <main>
+        <form name="params">
+
+            <div class="inputs">
+                <div class="inputBlock">
+                    <label for="rows">Filas</label>
+                    <input type="text" name="rows" id="rows" size="3" onchange="checkRowsCols()" value="">
+                </div>
+
+                <div class="inputBlock">
+                    <label for="columns" >Columnas</label>
+                    <input type="text" name="columns" id="columns" size="3" onchange="checkRowsCols()" value="0">
+                </div>
+            </div>
+            
+            <div>
+                <p class="alert">*Minimio 3 filas y 3 columnas</p>
+                <p class="alert" id="alerta1"></p>
+                <p class="alert" id="alerta2"></p>
+            </div>
+
+            <input type="button" class="play" id="start" onclick="StartGame()" value="JUGAR" disabled>
+            <input type="button" class="play" id="restart" onclick="RestartGame()" value="REINICIAR">
+
+        </form>
+
+        <div id="resultMsg"><p id="msgP"></p></div>
+        <div id="gameTable"></div>
+
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
