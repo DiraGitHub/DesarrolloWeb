@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Desafio 3 - Librerias</title>
+</head>
+<body>
+    <header>
+        <h1>REGISTRO DE PRODUCTOS</h1>
+        <a href="index.html"><span class="back"> &#60</span></a>
+    </header>
+    <main class="container">
+        <form action="" class="myForm" id="addForm">
+            <div class="inputContainer">
+                <label for="name">Nombre producto: </label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="inputContainer">
+                <label for="description">Descripción: </label>
+                <p><textarea name="message" rows="5" cols="30" id="description" required></textarea></p>
+            </div>
+            
+            <div class="inputContainer">
+                <label for="image">Nombre producto: </label>
+                <input type="file" accept="image/*" name="image" id="image" required>
+            </div>
+            
+            <div id="buttonContainer">
+                <button onclick="addProducts()" id="savePrd" class="">Guardar</button>
+            </div>
+
+        </form>
+
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/addProd.js"></script>
+</body>
+</html>
