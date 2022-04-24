@@ -1,0 +1,38 @@
+[
+    {
+        "idProduct" : "product1",
+        "name" : "At-Ox",
+        "description" : "Poderoso antioxidante gracias a sus componentes protege a las celulas fortalece tejidos,  vasos sanguíneos, protege pulmones.",
+        "image" : "atOx.jpg"
+    },
+    {
+        "idProduct" : "product2",
+        "name" : "Calcio Coral",
+        "description" : "Equilibra el PH, favorece la conexion entre neuronas por lo que ayuda a combatir problemas como migrañas Alzheimer. Problemas de osteoporosis, artritis, calambres, diabetes, colesterol.",
+        "image" : "calcioCoral.jpg"
+    },
+    {
+        "idProduct" : "product3",
+        "name" : "Carticat",
+        "description" : "Coadyuvante en el tratamiento de artritis, ulceras y cancer.",
+        "image" : "cartiCat.jpg"
+    },
+    {
+        "idProduct" : "product4",
+        "name" : "Real XB Capsulas/Tabletas",
+        "description" : "Ayuda a controlar el estrés, la depresión, irritabilidad, insomnio, colitis.",
+        "image" : "realXB.jpg"
+    },
+    {
+        "idProduct" : "product5",
+        "name" : "Xtra Vita",
+        "description" : "Ayuda en tratamiento de  Diabetes fortalece el sistema inmune y sistema nervioso. previene procesos tumorales.",
+        "image" : "xtraVita.jpg"
+    },
+    {
+        "idProduct" : "product6",
+        "name" : "Engy",
+        "description" : "Favorece la produccion de colágeno, refuerza el sistema inmune, regula el sistema digestivo y coadyuva funcines renal, disfuncion eréctil.",
+        "image" : "engy.jpg"
+    }
+]
