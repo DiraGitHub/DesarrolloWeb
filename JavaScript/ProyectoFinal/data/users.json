@@ -1,0 +1,25 @@
+[
+    {
+        "idUsr" : "1",
+        "tipo" : "admin",
+        "nombre" : "Erendira Hernandez",
+        "edad" : 35,
+        "telefono" : "5512345678",
+        "email" : "admin1@mail.com",
+        "ocupacion" : "Asesor IVES",
+        "direccion" : "Neza",
+        "clave" : "admin1"
+    },
+
+    {
+        "idUsr" : "2",
+        "tipo" : "client",
+        "nombre" : "Mir Flores",
+        "edad" : 35,
+        "telefono" : "5598765432",
+        "email" : "user1@mail.com",
+        "ocupacion" : "Empleada",
+        "direccion" : "Tlalpan",
+        "clave" : "user1"
+    }
+]

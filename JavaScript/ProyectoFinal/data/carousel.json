@@ -1,0 +1,21 @@
+[
+    {
+        "idCar" : "carousel1",
+        "image":"productosIves.jpg",
+        "title" : "AYUDA A TU CUERPO",
+        "text": "Los productos IVES ayudan a desintoxicar, regenerar y nutrir las celulas para mantener un equilibrio en tu organismo aprovechando la capacidad e inteligencia del cuerpo."
+    },
+    {
+        "idCar" : "carousel2",
+        "image":"promoBasico.jpg",
+        "title" : "PAQUETE DE BÁSICO",
+        "text": "Comienza a cuidar tu cuerpo con el paquete de inicio con 30% de descuento"
+    },
+    {
+        "idCar" : "carousel3",
+        "image":"distribuidores.jpg",
+        "title" : "FORMA PARTE DEL EQUIPO IVES",
+        "text": "Se parte de nuestra red de distribuidores y obten grandes beneficios."
+    }
+   
+]

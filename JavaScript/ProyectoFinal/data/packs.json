@@ -1,0 +1,23 @@
+[
+    {
+        "idPack" : "pack1",
+        "shortName":"Básico",
+        "title": "Paquete Básico",
+        "image":"packBasico.jpg",
+        "text": "Ayuda a brindar equilibrio y tranquilidad emocional. Mejorar el transito intestinal facilitando la absorción de nutrientes. Balance hormomanl. Favorece la relajación muscular, reduciendo la contracción. Ayuda en la desintoxicación hepático-renal.",
+        "products": ["RH-100","Wild Yam","Calcio Coral","Canadian Linaza","Real X-B Capsulas"],
+        "price": "$1500.00"
+    },
+    {
+        "idPack" : "pack2",
+        "shortName":"Reductivo",
+        "title": "Sistema Reduce",
+        "image":"packReduce.jpg",
+        "text": "Suegerido para personas que desan reducir peso y talla ya que tu cuerpo transformará la grasa en proteína o energía según la necesidad de tu organismo. Ofrece mayor nutrición y oxigenacion en la piel ayudando en la mejora de estrías, celulitis y varices.",
+        "products": ["Tulum","Life Mix Plus","Esla-Ny","Soft Skin","Tone Skin","Ice 02"],
+        "price": "$2500.00"
+    }
+   
+    
+   
+]

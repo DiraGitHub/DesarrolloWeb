@@ -1,0 +1,848 @@
+@charset "UTF-8";
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/***********************************/
+/*********** CSS GENERAL ***********/
+/***********************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+body .button {
+  background: -webkit-gradient(linear, left bottom, left top, from(#576ce6), to(white));
+  background: linear-gradient(to top, #576ce6, white);
+  padding: 5px 10px;
+  border-style: hidden;
+  border-radius: 15px;
+}
+
+main {
+  margin-bottom: 20px;
+}
+
+/***********************************/
+/***** CUSTOMIZACIÓN NAV BAR *******/
+/***********************************/
+.navbar {
+  background-color: white;
+  border-bottom: 3px double #b1aeae;
+}
+
+.navbar .logo {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.navbar .logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.navbar #navPerfil, .navbar #navLogout {
+  display: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 20px 20px;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 400px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 20px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 20px 30px;
+  }
+}
+
+/***********************************/
+/***** CUSTOMIZACIÓN CAROUSEL ******/
+/***********************************/
+.carousel-item .carousel-caption {
+  color: black;
+}
+
+/***********************************/
+/************ CSS FOOTER ***********/
+/***********************************/
+.ubicacion, .registroRapido {
+  display: none;
+}
+
+.foot {
+  background-color: #dfdbdb;
+  padding: 15px;
+}
+
+.foot section {
+  font-size: 15px;
+}
+
+.foot section h4, .foot section label, .foot section input {
+  color: #3d3d50;
+}
+
+.foot section p {
+  margin-bottom: 5px;
+  color: #3d3d50;
+}
+
+.foot section .icons {
+  margin-top: 15px;
+}
+
+.foot section .icons img {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.socialMedia {
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.socialMedia a {
+  margin-right: 20px;
+  color: #151616;
+}
+
+@media (min-width: 600px) {
+  .foot section {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ubicacion {
+    display: inline;
+  }
+  .foot section {
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .foot section {
+    padding-left: 20px;
+  }
+  .foot .registroRapido {
+    display: inline;
+  }
+  .foot .registroRapido form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .foot .registroRapido form .entrada {
+    margin-bottom: 5px;
+  }
+  .foot .registroRapido form .entrada label {
+    margin-right: 10px;
+  }
+}
+
+/***********************************/
+/******* CSS MAIN INFO INDEX *******/
+/***********************************/
+/* DEFINICIÓN POR MIXIN*/
+.central, .centralIndex, .centralProducts {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+/* DEFINICIÓN POR EXTEND*/
+.centralIndex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr;
+      grid-template-columns: 2fr;
+  -ms-grid-rows: .1fr 1fr .1fr .4fr;
+      grid-template-rows: .1fr 1fr .1fr .4fr;
+      grid-template-areas: "title" "products" "title2" "tips";
+}
+
+.centralIndex .nav-pills {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.centralIndex .packsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: products;
+}
+
+.centralIndex .packsInfo {
+  border: 1px #a5a3a3 solid;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.centralIndex .tips {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: tips;
+  border: 1px #a5a3a3 solid;
+  border-radius: 15px;
+  padding: 30px 50px 10px 50px;
+  font-style: italic;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.centralIndex .tips h3 {
+  display: none;
+}
+
+/***********************************/
+/*** CSS INFO PRINCIPAL GENERAL ****/
+/****** CSS CARDS PRIMER PARTE *****/
+/***********************************/
+.centralTitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.centralTitle2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: title2;
+}
+
+.centralTitle, .centralTitle2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.myCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.myCard:hover .imgCard {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.myCard .imgCard, .myCard h3, .myCard p, .myCard ul, .myCard .buttonCard {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.myCard .imgCard {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.myCard ul {
+  display: none;
+}
+
+.myCard .adminUL {
+  display: block;
+}
+
+.myCard .buttonCard {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .centralIndex {
+    margin-bottom: 0;
+    -ms-grid-columns: 5fr 1fr;
+        grid-template-columns: 5fr 1fr;
+    -ms-grid-rows: .5fr 3fr;
+        grid-template-rows: .5fr 3fr;
+        grid-template-areas: "title title2" "products tips";
+  }
+  .centralIndex .packsContainer {
+    padding: 15px;
+    border: 1px #a5a3a3 solid;
+    border-radius: 15px;
+    margin-right: 10px;
+  }
+  .centralIndex .packsInfo {
+    border: none;
+    padding: 0;
+  }
+  .centralIndex .tips {
+    padding: 30px 20px 10px 20px;
+  }
+  .tab-content > .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .myCard .imgCard {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .myCard .textCard {
+    margin-top: 10px;
+    width: 80%;
+  }
+  .tips {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .centralProducts {
+    padding: 15px;
+  }
+  .packsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .packsContainer .nav-pills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 10px;
+  }
+  .packsContainer .nav-pills .nav-link {
+    text-align: left;
+  }
+  .centralIndex .packsInfo {
+    border-left: 1px #a5a3a3 solid;
+    border-radius: 0;
+    padding-left: 10px;
+  }
+  .myCard ul {
+    display: inline;
+    padding: 0;
+    margin-right: 20px;
+  }
+  .myCard ul li {
+    margin-left: 30px;
+  }
+  .tips {
+    font-size: 20px;
+  }
+}
+
+/***********************************/
+/*** CSS CARDS 2 & INFO PRODUCTOS **/
+/***********************************/
+.centralProducts {
+  min-height: 72vh;
+}
+
+.cardsContainer {
+  padding: 15px;
+  margin: 10px;
+  border: 1px #a5a3a3 solid;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cardsContainer .myCard {
+  border-bottom: 1px #a5a3a3 solid;
+}
+
+.cardsContainer .lastCard {
+  border: none;
+}
+
+@media (min-width: 600px) {
+  .centralProducts {
+    margin-bottom: 0;
+    position: relative;
+  }
+  .centralProducts .tab-content > .active {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .cardsContainer {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cardsContainer .myCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    border: 1px #a5a3a3 solid;
+    border-radius: 15px;
+  }
+  .cardsContainer .myCard .imgCard {
+    margin-top: 10px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .centralProducts {
+    padding: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 5fr;
+        grid-template-columns: 1fr 5fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "leftMenu products";
+  }
+  .centralProducts .nav-pills {
+    margin-top: 20px;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .centralProducts section {
+    border: 1px #a5a3a3 solid;
+    padding-top: 15px;
+    border-radius: 15px;
+    margin-left: 15px;
+  }
+  .centralProducts .centralTitle {
+    display: inline;
+  }
+}
+
+/**************************************/
+/* CSS MAIN INFO NOSOTROS & SERVICIOS */
+/**************************************/
+.centralInfo {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.centralInfo .blank {
+  display: none;
+}
+
+.centralInfo .generalInfo {
+  padding: 15px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#adccd8), to(white));
+  background: linear-gradient(to top, #adccd8, white);
+  -webkit-box-shadow: 10px 10px 5px #8c8d8d;
+          box-shadow: 10px 10px 5px #8c8d8d;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.terapeutas .imgCard {
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  .centralInfo {
+    width: 90%;
+    margin-left: 5%;
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 60px;
+            column-gap: 60px;
+  }
+  .centralInfo .blank {
+    display: block;
+    height: 300px;
+  }
+}
+
+/***********************************/
+/***** CSS MAIN INFO REGISTRO ******/
+/***********************************/
+.infoRegistro {
+  margin-top: 50px;
+  padding: 15px;
+  text-align: center;
+  height: 130vh;
+}
+
+.infoRegistro .title {
+  text-shadow: 1px 1px 1px #b0b3b6;
+  color: #585d6d;
+}
+
+.infoRegistro .formsContainer {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.infoRegistro .formsContainer .login {
+  margin-top: 30px;
+  border-bottom: 1px #a5a3a3 solid;
+}
+
+.infoRegistro .formsContainer .registro {
+  margin-top: 30px;
+}
+
+.infoRegistro .formsContainer .twoInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.infoRegistro .formsContainer .entrada {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.infoRegistro .formsContainer .entrada label {
+  margin-right: 10px;
+}
+
+.infoRegistro .formsContainer .entrada input {
+  border: none;
+  border-bottom: 1px #a5a3a3 solid;
+}
+
+.infoRegistro .formsContainer .entrada .infoBox {
+  padding: 4px 8px;
+  border: 1px #a5a3a3 solid;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #868585;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: white;
+  cursor: help;
+}
+
+.infoRegistro .formsContainer .entrada .textInfo {
+  display: none;
+  width: 200px;
+  background-color: #e9e6e6;
+  color: #a1a0a0;
+  font-size: 15px;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  right: 10px;
+}
+
+.infoRegistro .formsContainer .entrada .infoBox:hover + .textInfo {
+  display: inline;
+}
+
+.infoRegistro .formsContainer .checkLabel {
+  margin-left: 10px;
+}
+
+.infoRegistro .formsContainer .buttonCard {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-height: 810px) {
+  .infoRegistro {
+    height: 105vh;
+  }
+}
+
+@media (min-height: 900px) {
+  .infoRegistro {
+    height: 90vh;
+  }
+}
+
+@media (min-height: 1000px) {
+  .infoRegistro {
+    height: 67.5vh;
+  }
+}
+
+@media (min-width: 600px) {
+  .infoRegistro {
+    height: 100vh;
+  }
+  .infoRegistro .formsContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .infoRegistro .formsContainer .twoInputs div {
+    margin-top: 20px;
+  }
+  .infoRegistro .formsContainer .entrada .infoBox:hover + .textInfo {
+    display: block;
+    float: right;
+    z-index: 3;
+  }
+  .infoRegistro .formsContainer .line {
+    height: 500px;
+    border: 1px #a5a3a3 solid;
+  }
+  .infoRegistro .formsContainer .login {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 724px) {
+  .infoRegistro .formsContainer .twoInputs div {
+    margin-top: 0;
+  }
+}
+
+/****************************/
+/****************************/
+.adminFooter {
+  text-align: center;
+}
+
+.adminMain {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: .5fr 4fr;
+      grid-template-columns: .5fr 4fr;
+      grid-template-areas: "menu info";
+}
+
+.adminLeftMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: 2px solid #5c5a5a;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  padding: 15px;
+}
+
+.adminLeftMenu .leftOptions {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+
+.adminLeftMenu .leftOptions:hover {
+  background-color: #dbd8d8;
+}
+
+.adminLeftMenu .activeOp {
+  background-color: #aaa8a8;
+}
+
+.adminInfo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: info;
+  padding-left: 10px;
+}
+
+.adminTitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #7a1f31;
+  color: white;
+  text-align: center;
+}
+
+.agregar {
+  background: #43a743;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 50%;
+  margin-left: 85%;
+}
+
+.back {
+  background: #f5500f;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 50%;
+  margin-left: 85%;
+}
+
+.adminLink {
+  text-decoration: none;
+}
+
+.adminView {
+  padding: 10px;
+}
+
+.cost {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: right;
+}
+
+.funciones {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.funciones span {
+  color: #2020f1;
+  margin-left: 20%;
+  cursor: pointer;
+}
+
+.adminForm {
+  padding: 15px;
+  border: 1px gray solid;
+  border-radius: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.adminForm .inputContainer {
+  margin-bottom: 10px;
+}
+
+.adminForm .inputContainer input {
+  padding: 5px;
+}
+
+.adminForm button {
+  margin-top: 25px;
+  padding: 10px 10px;
+  border-radius: 15%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#416ba3), to(#f6f7f8));
+  background: linear-gradient(to top, #416ba3, #f6f7f8);
+  border-style: hidden;
+  margin-left: 40%;
+}
+
+.columnCheck {
+  float: left;
+  width: 50%;
+}
+
+.rowCheck:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*# sourceMappingURL=estilos.css.map */
