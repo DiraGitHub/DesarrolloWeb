@@ -1,0 +1,12 @@
+
+.cartWidget{
+    margin-left: 2rem;
+}
+
+.cartWidget:hover .cart{
+    cursor:pointer;
+}
+
+.cart{
+    width: 3rem; 
+}
