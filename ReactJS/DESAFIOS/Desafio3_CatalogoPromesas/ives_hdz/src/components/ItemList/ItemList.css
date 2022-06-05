@@ -1,0 +1,29 @@
+.myCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .8rem;
+}
+
+.myCard:hover .imgCard {
+    transform: scale(1.06);
+    transition: all .5s;
+}
+
+.myCard .imgCard,
+h3,
+p,
+.buttonCard {
+    margin-bottom: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.myCard .imgCard {
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+.myCard .buttonCard {
+    text-align: center;
+}
