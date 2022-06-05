@@ -1,8 +1,25 @@
+.cardsContainer {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
 .myCard {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: .8rem;
+    border-bottom: .5rem .8rem;
+    border: 1px rgb(165, 163, 163) solid;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.lastCard{
+    border: none;
 }
 
 .myCard:hover .imgCard {
@@ -10,7 +27,7 @@
     transition: all .5s;
 }
 
-.myCard .imgCard,
+.imgCard,
 h3,
 p,
 .buttonCard {
@@ -18,12 +35,23 @@ p,
     color: rgb(0, 0, 0);
 }
 
-.myCard .imgCard {
+.imgCard {
     width: 50%;
-    margin-left: 25%;
+    margin-top: 10px;
+    align-self: center;
 }
 
 
-.myCard .buttonCard {
+.buttonCard {
     text-align: center;
+}
+
+.textCard {
+    min-height: 12rem;
+}
+
+.textCard {
+    min-height: 15rem;
+    text-align: left;
+    padding: .5rem;
 }

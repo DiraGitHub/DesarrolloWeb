@@ -8,24 +8,23 @@ import ItemList from '../ItemList/ItemList.js'
 
 const ItemListContainer = (props) => {
 
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
-    //    console.log(getProducts());
         getProducts().then(res => {
             setProducts(res);
-            // console.log(res)
         })
-    }, [])
+    }, []);
 
-    console.log(products)
+    console.log(products);
 
     return (
-        <div>
+        <section className='centralProducts'>
             <h1>{props.title}</h1>
-            {/* <ItemList products={products} />  */}
-        </div>
-    )
-}
+            <ItemList productsList={products} /> 
 
-export default ItemListContainer
+            </section>
+    );
+};
+
+export default ItemListContainer;
