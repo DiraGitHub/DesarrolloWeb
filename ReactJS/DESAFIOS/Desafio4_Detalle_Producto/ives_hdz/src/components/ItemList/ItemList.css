@@ -1,0 +1,65 @@
+.cardsContainer {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.myCard {
+    display: flex;
+    flex-direction: column;
+    margin-top: .8rem;
+    border-bottom: .5rem .8rem;
+    border: 1px rgb(165, 163, 163) solid;
+    border-radius: 1rem;
+}
+
+a:-webkit-any-link{
+    text-decoration: none;
+    width: 12rem;
+}
+
+.lastCard{
+    border: none;
+}
+
+.myCard:hover .imgCard {
+    transform: scale(1.06);
+    transition: all .5s;
+}
+
+.imgCard,
+h3,
+p,
+.buttonCard {
+    margin-bottom: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.imgCard {
+    width: 50%;
+    margin-top: 10px;
+    align-self: center;
+}
+
+
+.buttonCard {
+    padding: 1rem;
+    text-align: center;
+}
+
+.textCard {
+    text-align: left;
+    padding: .5rem;
+}
+
+.textCard p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
