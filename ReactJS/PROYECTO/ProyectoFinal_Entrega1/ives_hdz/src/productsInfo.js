@@ -116,7 +116,7 @@ const products = [
         name: "Life Mix Family Fresa",
         description: "Sabor Fresa: fortalece la flora intestinal, previene anemias,ayuda a reforzar el sistema respiratorio y nervioso.",
         image: "lifeMixFresa.jpg",
-        precio: "$420.00.00",
+        precio: "$420.00",
         categoria: "vitaminas"
     },
     {
@@ -209,7 +209,7 @@ const products = [
     },
     {
         idProduct: "product27",
-        name: ">Healthy Skin",
+        name: "Healthy Skin",
         description: "Jabon de tocador para piel grasa  y mixta. Por su accion antiséptica,antibiotica y fungicida es ideal como Auxiliar en el tratamiento del acné,caspa y pie de atleta. cicatrizante.",
         image: "healthySkin.jpg",
         precio: "$110.00",

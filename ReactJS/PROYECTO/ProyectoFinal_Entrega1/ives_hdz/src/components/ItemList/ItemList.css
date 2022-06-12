@@ -17,9 +17,9 @@
     border-radius: 1rem;
 }
 
-a:-webkit-any-link{
+.myCard a:-webkit-any-link{
     text-decoration: none;
-    width: 12rem;
+    width: 14rem;
 }
 
 .lastCard{

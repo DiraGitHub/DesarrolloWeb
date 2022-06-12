@@ -12,20 +12,20 @@ const NavBar = () => {
             </div>
             <div className='navOptions'>
                 <div>
-                    <Link to='/category/suplementos'>
-                        <span className='navLink'>Suplementos</span>
+                    <Link to='/category/suplementos' className='navLink'>
+                        Suplementos
                     </Link>
-                    <Link to='/category/vitaminas'>
-                        <span className='navLink'>Vitáminas</span>
+                    <Link to='/category/vitaminas' className='navLink'>
+                        Vitáminas
                     </Link>
-                    <Link to='/category/intestino'>
-                        <span className='navLink'>Salud Intestinal</span>
+                    <Link to='/category/intestino' className='navLink'>
+                         Salud Intestinal
                     </Link>
-                    <Link to='/category/cabello'>
-                        <span className='navLink'>Cuidado del Cabello</span>
+                    <Link to='/category/cabello' className='navLink'>
+                        Cuidado del Cabello
                     </Link>
-                    <Link to='/category/piel'>
-                        <span className='navLink'>Cuidado de la Piel</span>
+                    <Link to='/category/piel' className='navLink'>
+                        Cuidado de la Piel
                     </Link>
                 </div>
                 <CartWidget />
