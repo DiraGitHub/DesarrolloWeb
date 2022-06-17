@@ -1,0 +1,21 @@
+
+.cartWidget{
+    margin-left: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.cartWidget span{
+    font-size: 2rem;    
+    color:black
+}
+
+.cartWidget:hover .cart{
+    cursor:pointer;
+}
+
+.cart{
+    width: 3rem; 
+    height: 3rem;
+}
