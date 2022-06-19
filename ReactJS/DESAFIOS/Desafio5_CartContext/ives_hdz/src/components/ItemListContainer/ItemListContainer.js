@@ -48,7 +48,7 @@ const ItemListContainer = () => {
     return (
         <section className='centralProducts'>
             <h1>{title}</h1>
-            <ItemList productsList={products} />
+            <ItemList productsList={products}  />
         </section>
     );
 };

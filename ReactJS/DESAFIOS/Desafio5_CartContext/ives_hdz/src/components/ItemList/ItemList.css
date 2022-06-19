@@ -3,14 +3,14 @@
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
 .myCard {
     display: flex;
     flex-direction: column;
-    margin-top: .8rem;
+    margin: 2rem .4rem 0rem .4rem;
     border-bottom: .5rem .8rem;
     border: 1px rgb(165, 163, 163) solid;
     border-radius: 1rem;

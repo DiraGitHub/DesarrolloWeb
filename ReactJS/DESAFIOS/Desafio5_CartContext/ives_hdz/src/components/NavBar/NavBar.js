@@ -28,7 +28,9 @@ const NavBar = () => {
                         Cuidado de la Piel
                     </Link>
                 </div>
-                <CartWidget />
+                <Link to='./cart'>
+                    <CartWidget />
+                </Link>
             </div>
         
         </nav>

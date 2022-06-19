@@ -4,11 +4,12 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    
 }
 
 .cartWidget span{
     font-size: 2rem;    
-    color:black
+    color:black;
 }
 
 .cartWidget:hover .cart{

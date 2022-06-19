@@ -1,11 +1,34 @@
 import './ItemDetail.css'
+import { useContext } from 'react';
 import { useState, useEffect } from 'react'
 import BuyButton from '../BuyButton/BuyButton';
+import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
-const ItemDetail = ({ idProd, name, image, precio, description }) => {
+
+const ItemDetail = ({ idProduct, name, image, precio, description }) => {
+
+    // const [isAdded,setIsAdded] = useState(0);
+    const {isInCart, addProd} = useContext(CartContext);
+
+
     const handleAdd = (quantity) =>{
-        console.log(`Se agregaron ${quantity} ${name}`)
+        // console.log(`Se agregaron ${quantity} ${name}`);
+        addProd([{idProduct,name,image,precio,quantity}]);
+        // setIsAdded(quantity);
     };
+
+    const handleDel = (quantity) =>{
+        console.log(`Se quitaron ${quantity} ${name}`)
+        // delProd([{idProduct,name,image,precio,quantity}]);
+    };
+
+    const handleEmpty = (quantity) => {
+        console.log(`Se eliminaron todos los ${quantity} ${name}`)
+        // emptyCart([{idProduct,name,image,precio,quantity}]);
+    };
+
+    const isAdded = isInCart(idProduct);
 
     return (
         <div className='centralInfo'>
@@ -18,7 +41,9 @@ const ItemDetail = ({ idProd, name, image, precio, description }) => {
                 <div className='textCard'>
                     <p>{description}</p>
                     <p className='bold'>{precio}</p>
-                    <BuyButton onAddCart={handleAdd}/> 
+                    {!isAdded ? <BuyButton onAddCart={handleAdd} onDelCart={handleDel} onEmptyCart={handleEmpty}/> :        <Link to='/cart'>
+                        <p className='finshBuy'>Terminar compra</p>
+                    </Link> }
                 </div>
 
             </div>

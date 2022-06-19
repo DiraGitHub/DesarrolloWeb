@@ -16,7 +16,7 @@ const ItemDetailContainer = () =>{
     useEffect (()=>{
         getProductById(params.productID)
         .then(resp =>{
-            console.log(resp);
+            // console.log(resp);
             setProduct(resp);
         });
     },[]);
@@ -24,7 +24,7 @@ const ItemDetailContainer = () =>{
     return (
         <>
             <h1>Detalle del producto</h1>
-            <ItemDetail {...product}/>
+            <ItemDetail {...product} />
         </>
     );
 }
