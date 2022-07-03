@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color:rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Courier New', Courier, monospace;
+     font-weight:bold;
+  }
+  
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.3rem;
+  } 
+  h3{
+    font-size: 1rem;
+  } 
+  h4{font-size: .9rem;}
+  
+a{
+  text-decoration: none;
+}
+
+
+.finshBuy{
+  margin-bottom: 2rem;
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  color: rgb(235, 153, 12);
+  text-decoration: none;
+  text-align: center;
+}
+
+  .button{
+    background: linear-gradient(to top,rgb(87, 108, 230),white);
+    padding:  .5rem .8rem;
+    border-style:hidden;
+    border-radius: 1rem;
+  }
+  
+  main{
+    margin-bottom: 2rem;
+    min-height: 80vh;
+  }
